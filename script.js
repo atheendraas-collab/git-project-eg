@@ -1,6 +1,6 @@
-/* =========================
+/* =====================================
    LOADER
-========================= */
+===================================== */
 
 window.addEventListener("load", () => {
 
@@ -10,70 +10,199 @@ window.addEventListener("load", () => {
             .getElementById("loader")
             .classList.add("hide");
 
-    }, 1200);
+    }, 1500);
 
 });
 
 
-/* =========================
+/* =====================================
+   FLOATING PARTICLES
+===================================== */
+
+const particles =
+    document.querySelector(".particles");
+
+for (let i = 0; i < 35; i++) {
+
+    const particle =
+        document.createElement("div");
+
+    particle.className = "particle";
+
+    particle.style.left =
+        Math.random() * 100 + "%";
+
+    particle.style.animationDuration =
+        5 + Math.random() * 10 + "s";
+
+    particle.style.animationDelay =
+        Math.random() * 8 + "s";
+
+    particle.style.opacity =
+        Math.random();
+
+    particles.appendChild(particle);
+
+}
+
+
+/* =====================================
+   SCROLL REVEAL
+===================================== */
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal-section"
+    );
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add(
+                        "visible"
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: .15
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
+/* =====================================
+   HERO PARALLAX
+===================================== */
+
+window.addEventListener("scroll", () => {
+
+    const scroll =
+        window.scrollY;
+
+    const heroImage =
+        document.querySelector(
+            ".hero-image"
+        );
+
+    if (heroImage) {
+
+        heroImage.style.transform =
+            `scale(1.08) translateY(${scroll * .15}px)`;
+
+    }
+
+});
+
+
+/* =====================================
+   PERSON CARD 3D MOUSE EFFECT
+===================================== */
+
+const personCard =
+    document.querySelector(
+        ".person-card"
+    );
+
+document.addEventListener(
+    "mousemove",
+    event => {
+
+        if (!personCard) return;
+
+        const x =
+            (window.innerWidth / 2 -
+            event.clientX) / 40;
+
+        const y =
+            (window.innerHeight / 2 -
+            event.clientY) / 40;
+
+        personCard.style.transform =
+            `rotateY(${-x}deg)
+             rotateX(${y}deg)
+             rotateZ(2deg)`;
+
+    }
+);
+
+
+/* =====================================
    BOOKING MODAL
-========================= */
+===================================== */
 
 const bookingModal =
-    document.getElementById("bookingModal");
+    document.getElementById(
+        "bookingModal"
+    );
+
 
 function openBooking() {
 
-    bookingModal.classList.add("active");
+    bookingModal.classList.add(
+        "active"
+    );
 
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow =
+        "hidden";
 
-    calculateTotal();
+    calculatePrice();
+
 }
 
 
 function closeBooking() {
 
-    bookingModal.classList.remove("active");
+    bookingModal.classList.remove(
+        "active"
+    );
 
-    document.body.style.overflow = "auto";
+    document.body.style.overflow =
+        "auto";
 
 }
 
 
-/* =========================
-   ROOM SELECTION
-========================= */
+/* =====================================
+   SELECT ROOM
+===================================== */
 
-function selectRoom(room, price) {
+function selectRoom(price) {
 
     openBooking();
 
-    const select =
-        document.getElementById("roomSelect");
+    const room =
+        document.getElementById(
+            "room"
+        );
 
-    if (price == 8500) {
-        select.selectedIndex = 0;
-    }
+    room.value = price;
 
-    if (price == 12500) {
-        select.selectedIndex = 1;
-    }
+    calculatePrice();
 
-    if (price == 18500) {
-        select.selectedIndex = 2;
-    }
-
-    calculateTotal();
 }
 
 
-/* =========================
-   CALCULATE BOOKING PRICE
-========================= */
+/* =====================================
+   PRICE CALCULATOR
+===================================== */
 
-const roomSelect =
-    document.getElementById("roomSelect");
+const room =
+    document.getElementById("room");
 
 const checkin =
     document.getElementById("checkin");
@@ -82,28 +211,29 @@ const checkout =
     document.getElementById("checkout");
 
 
-roomSelect.addEventListener(
+room.addEventListener(
     "change",
-    calculateTotal
+    calculatePrice
 );
 
 checkin.addEventListener(
     "change",
-    calculateTotal
+    calculatePrice
 );
 
 checkout.addEventListener(
     "change",
-    calculateTotal
+    calculatePrice
 );
 
 
-function calculateTotal() {
+function calculatePrice() {
 
-    const price =
-        Number(roomSelect.value);
+    let price =
+        Number(room.value);
 
     let nights = 1;
+
 
     if (
         checkin.value &&
@@ -119,33 +249,40 @@ function calculateTotal() {
         const difference =
             end - start;
 
-        const calculated =
+        const calculatedNights =
             Math.ceil(
                 difference /
                 (1000 * 60 * 60 * 24)
             );
 
-        if (calculated > 0) {
-            nights = calculated;
+        if (calculatedNights > 0) {
+
+            nights =
+                calculatedNights;
+
         }
 
     }
 
+
     const total =
         price * nights;
 
+
     document.getElementById(
-        "totalPrice"
+        "total"
     ).textContent =
         "₹" +
-        total.toLocaleString("en-IN");
+        total.toLocaleString(
+            "en-IN"
+        );
 
 }
 
 
-/* =========================
+/* =====================================
    CONFIRM BOOKING
-========================= */
+===================================== */
 
 function confirmBooking() {
 
@@ -159,29 +296,37 @@ function confirmBooking() {
         );
 
         return;
+
     }
 
+
     alert(
-        "🎉 Pre-booking request received!\n\n" +
+        "✨ PRE-BOOKING RECEIVED!\n\n" +
+        "Thank you for choosing AYANA Kerala Retreat.\n\n" +
         "Our reservation team will contact you shortly."
     );
+
 
     closeBooking();
 
 }
 
 
-/* =========================
-   SPA
-========================= */
+/* =====================================
+   SPA MODAL
+===================================== */
 
 const spaModal =
-    document.getElementById("spaModal");
+    document.getElementById(
+        "spaModal"
+    );
 
 
 function openSpa() {
 
-    spaModal.classList.add("active");
+    spaModal.classList.add(
+        "active"
+    );
 
     document.body.style.overflow =
         "hidden";
@@ -191,7 +336,9 @@ function openSpa() {
 
 function closeSpa() {
 
-    spaModal.classList.remove("active");
+    spaModal.classList.remove(
+        "active"
+    );
 
     document.body.style.overflow =
         "auto";
@@ -203,31 +350,37 @@ function confirmSpa() {
 
     const treatment =
         document.getElementById(
-            "spaSelect"
+            "spaTreatment"
         );
 
+
     alert(
-        "🌿 Spa pre-booking confirmed!\n\n" +
+        "🌿 SPA PRE-BOOKING RECEIVED!\n\n" +
         treatment.options[
             treatment.selectedIndex
         ].text
     );
+
 
     closeSpa();
 
 }
 
 
-/* =========================
-   CLOSE MODAL OUTSIDE
-========================= */
+/* =====================================
+   CLOSE MODALS
+===================================== */
 
 bookingModal.addEventListener(
     "click",
-    function(event) {
+    event => {
 
-        if (event.target === bookingModal) {
+        if (
+            event.target === bookingModal
+        ) {
+
             closeBooking();
+
         }
 
     }
@@ -236,19 +389,23 @@ bookingModal.addEventListener(
 
 spaModal.addEventListener(
     "click",
-    function(event) {
+    event => {
 
-        if (event.target === spaModal) {
+        if (
+            event.target === spaModal
+        ) {
+
             closeSpa();
+
         }
 
     }
 );
 
 
-/* =========================
-   ESCAPE
-========================= */
+/* =====================================
+   ESC KEY
+===================================== */
 
 document.addEventListener(
     "keydown",
@@ -257,31 +414,10 @@ document.addEventListener(
         if (event.key === "Escape") {
 
             closeBooking();
+
             closeSpa();
 
         }
-
-    }
-);
-
-
-/* =========================
-   PARALLAX HERO
-========================= */
-
-window.addEventListener(
-    "scroll",
-    () => {
-
-        const bg =
-            document.querySelector(
-                ".hero-bg"
-            );
-
-        if (!bg) return;
-
-        bg.style.transform =
-            `scale(1.05) translateY(${window.scrollY * 0.12}px)`;
 
     }
 );
