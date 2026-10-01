@@ -4,376 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kerala — God's Own Country</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Ayana — Kerala Luxury Retreat</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- LOADER -->
-<div class="loader">
-    <div class="loader-logo">KERALA</div>
-    <div class="loader-line"></div>
-    <p>Discovering God's Own Country...</p>
+<!-- ================= LOADER ================= -->
+
+<div class="loader" id="loader">
+    <div class="loader-logo">AYANA</div>
+    <span>KERALA LUXURY RETREAT</span>
 </div>
 
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
+
 <header class="navbar">
 
-    <div class="logo">
-        <span>കേരളം</span>
-        <small>GOD'S OWN COUNTRY</small>
+    <div class="brand">
+        <h2>AYANA</h2>
+        <span>KERALA RETREAT</span>
     </div>
 
     <nav>
         <a href="#home">Home</a>
-        <a href="#places">Places</a>
+        <a href="#stay">Stay</a>
+        <a href="#spa">Spa</a>
         <a href="#experiences">Experiences</a>
-        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <button class="menu-btn">☰</button>
+    <button class="book-nav" onclick="openBooking()">
+        BOOK NOW
+    </button>
 
 </header>
 
 
-<!-- HERO -->
-<section id="home" class="hero">
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
 
     <div class="hero-bg"></div>
 
-    <!-- animated fog -->
-    <div class="fog fog-one"></div>
-    <div class="fog fog-two"></div>
-
-    <!-- particles -->
-    <div class="particles"></div>
+    <div class="hero-overlay"></div>
 
     <div class="hero-content">
 
-        <p class="eyebrow">WELCOME TO KERALA</p>
+        <p class="eyebrow">
+            WELCOME TO GOD'S OWN COUNTRY
+        </p>
 
         <h1>
-            Where Nature
-            <span>Breathes</span>
+            Escape Into
+            <span>Kerala.</span>
         </h1>
 
-        <p class="hero-text">
-            Journey through emerald forests, peaceful backwaters,
-            mist-covered mountains and endless tropical beauty.
+        <p>
+            A private sanctuary surrounded by tropical
+            forests, peaceful waters and timeless Kerala beauty.
         </p>
 
         <div class="hero-buttons">
-            <a href="#places" class="btn primary">Explore Kerala</a>
-            <a href="#experiences" class="btn secondary">Discover More</a>
+
+            <button
+                class="gold-btn"
+                onclick="openBooking()">
+                PRE-BOOK YOUR STAY
+            </button>
+
+            <a href="#spa" class="outline-btn">
+                EXPLORE SPA
+            </a>
+
         </div>
 
     </div>
 
-    <div class="scroll-down">
-        <span></span>
-        SCROLL TO EXPLORE
+
+    <!-- PERSON IMAGE -->
+
+    <div class="person-card">
+
+        <img
+            src="person.jpeg"
+            alt="Featured guest">
+
+        <div class="person-caption">
+
+            <small>YOUR PRIVATE ESCAPE</small>
+
+            <strong>
+                Relax. Reconnect.
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll">
+        SCROLL TO DISCOVER
     </div>
 
 </section>
 
 
-<!-- INTRO -->
+<!-- ================= INTRO ================= -->
+
 <section class="intro">
 
-    <div class="intro-image reveal">
-        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=90">
-    </div>
+    <div class="intro-text">
 
-    <div class="intro-content reveal">
-
-        <p class="section-label">THE SOUL OF KERALA</p>
+        <p class="label">
+            THE AYANA EXPERIENCE
+        </p>
 
         <h2>
-            A Land Painted
-            <em>By Nature</em>
+            Stay close to
+            <em>nature.</em>
         </h2>
 
         <p>
-            From the silent backwaters of Alappuzha to the misty
-            mountains of Munnar, Kerala is a place where every
-            sunrise feels like a painting.
+            Wake up to birdsong, tropical greenery and
+            the gentle breeze of Kerala. Ayana combines
+            modern luxury with the warmth of traditional
+            Kerala hospitality.
         </p>
 
-        <p>
-            Walk through spice plantations, listen to waterfalls,
-            watch traditional boats glide across emerald waters,
-            and experience the timeless culture of God's Own Country.
-        </p>
-
-        <div class="stats">
+        <div class="features">
 
             <div>
-                <strong>44</strong>
-                <span>Rivers</span>
+                <strong>24/7</strong>
+                <span>Hospitality</span>
             </div>
 
             <div>
-                <strong>580</strong>
-                <span>KM Coastline</span>
+                <strong>5★</strong>
+                <span>Luxury Stay</span>
             </div>
 
             <div>
-                <strong>14</strong>
-                <span>Districts</span>
+                <strong>100%</strong>
+                <span>Nature</span>
             </div>
 
         </div>
 
     </div>
 
+    <div class="intro-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90"
+            alt="Luxury resort">
+
+    </div>
+
 </section>
 
 
-<!-- DESTINATIONS -->
-<section id="places" class="destinations">
+<!-- ================= ROOMS ================= -->
 
-    <div class="section-heading reveal">
+<section class="stay" id="stay">
 
-        <p class="section-label">EXPLORE THE LAND</p>
+    <div class="section-title">
+
+        <p class="label">PRIVATE STAYS</p>
 
         <h2>
-            Places That Feel
-            <em>Unreal</em>
+            Choose Your
+            <em>Escape</em>
         </h2>
-
-        <p>
-            Discover the landscapes that make Kerala one of the
-            world's most beautiful tropical destinations.
-        </p>
 
     </div>
 
 
-    <div class="destination-grid">
+    <div class="room-grid">
 
-        <!-- MUNNAR -->
-        <article class="destination-card large reveal">
+        <div class="room">
 
-            <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1400&q=90">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=90">
 
-            <div class="card-overlay">
+            <div class="room-info">
 
-                <span>01 / HILLS</span>
+                <span>01 / SIGNATURE</span>
 
-                <h3>Munnar</h3>
+                <h3>Forest Villa</h3>
 
                 <p>
-                    Endless tea gardens floating among the clouds.
+                    Private villa surrounded by lush
+                    tropical greenery.
                 </p>
 
-                <button onclick="openPlace('Munnar')">
-                    Discover →
+                <div class="price">
+                    ₹8,500
+                    <small>/ night</small>
+                </div>
+
+                <button onclick="selectRoom('Forest Villa', 8500)">
+                    BOOK THIS ROOM
                 </button>
 
             </div>
-
-        </article>
-
-
-        <!-- ALLEPPEY -->
-        <article class="destination-card reveal">
-
-            <img src="https://images.unsplash.com/photo-1602303632170-5a9e0f3f3f20?auto=format&fit=crop&w=1200&q=90">
-
-            <div class="card-overlay">
-
-                <span>02 / BACKWATERS</span>
-
-                <h3>Alappuzha</h3>
-
-                <p>Drift through the peaceful backwaters.</p>
-
-                <button onclick="openPlace('Alappuzha')">
-                    Discover →
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- WAYANAD -->
-        <article class="destination-card reveal">
-
-            <img src="https://images.unsplash.com/photo-1605538883669-825200433431?auto=format&fit=crop&w=1200&q=90">
-
-            <div class="card-overlay">
-
-                <span>03 / WILDERNESS</span>
-
-                <h3>Wayanad</h3>
-
-                <p>Misty forests, caves and wild mountains.</p>
-
-                <button onclick="openPlace('Wayanad')">
-                    Discover →
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- ATHIRAPPILLY -->
-        <article class="destination-card large reveal">
-
-            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1400&q=90">
-
-            <div class="card-overlay">
-
-                <span>04 / WATERFALLS</span>
-
-                <h3>Athirappilly</h3>
-
-                <p>The roaring waterfall of Kerala.</p>
-
-                <button onclick="openPlace('Athirappilly')">
-                    Discover →
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- VARKALA -->
-        <article class="destination-card reveal">
-
-            <img src="https://images.unsplash.com/photo-1590050752117-23a9d7fcf0a1?auto=format&fit=crop&w=1200&q=90">
-
-            <div class="card-overlay">
-
-                <span>05 / COAST</span>
-
-                <h3>Varkala</h3>
-
-                <p>Golden sunsets above the Arabian Sea.</p>
-
-                <button onclick="openPlace('Varkala')">
-                    Discover →
-                </button>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- PARALLAX QUOTE -->
-<section class="quote-section">
-
-    <div class="quote-bg"></div>
-
-    <div class="quote-content reveal">
-
-        <span>“</span>
-
-        <h2>
-            Kerala is not just
-            <em>a destination.</em>
-            It is a feeling.
-        </h2>
-
-        <p>— God's Own Country</p>
-
-    </div>
-
-</section>
-
-
-<!-- EXPERIENCES -->
-<section id="experiences" class="experiences">
-
-    <div class="section-heading reveal">
-
-        <p class="section-label">EXPERIENCE KERALA</p>
-
-        <h2>
-            Feel The
-            <em>Magic</em>
-        </h2>
-
-    </div>
-
-
-    <div class="experience-grid">
-
-        <div class="experience reveal">
-
-            <div class="experience-number">01</div>
-
-            <div class="experience-icon">🛶</div>
-
-            <h3>Backwater Life</h3>
-
-            <p>
-                Sail through coconut-lined waterways
-                aboard a traditional Kerala houseboat.
-            </p>
 
         </div>
 
 
-        <div class="experience reveal">
+        <div class="room">
 
-            <div class="experience-number">02</div>
+            <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=90">
 
-            <div class="experience-icon">🌿</div>
+            <div class="room-info">
 
-            <h3>Spice Trails</h3>
+                <span>02 / PREMIUM</span>
 
-            <p>
-                Walk through fragrant cardamom,
-                pepper and tea plantations.
-            </p>
+                <h3>Pool Villa</h3>
 
-        </div>
+                <p>
+                    A private pool villa for a
+                    peaceful luxury retreat.
+                </p>
 
+                <div class="price">
+                    ₹12,500
+                    <small>/ night</small>
+                </div>
 
-        <div class="experience reveal">
+                <button onclick="selectRoom('Pool Villa', 12500)">
+                    BOOK THIS ROOM
+                </button>
 
-            <div class="experience-number">03</div>
-
-            <div class="experience-icon">🌊</div>
-
-            <h3>Waterfalls</h3>
-
-            <p>
-                Feel the power of Kerala's waterfalls
-                hidden inside tropical forests.
-            </p>
+            </div>
 
         </div>
 
 
-        <div class="experience reveal">
+        <div class="room">
 
-            <div class="experience-number">04</div>
+            <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1400&q=90">
 
-            <div class="experience-icon">🌅</div>
+            <div class="room-info">
 
-            <h3>Golden Sunsets</h3>
+                <span>03 / ROYAL</span>
 
-            <p>
-                Watch the sun disappear over Kerala's
-                beautiful Arabian Sea coastline.
-            </p>
+                <h3>Royal Lake Villa</h3>
+
+                <p>
+                    Wake up beside peaceful Kerala
+                    backwaters.
+                </p>
+
+                <div class="price">
+                    ₹18,500
+                    <small>/ night</small>
+                </div>
+
+                <button onclick="selectRoom('Royal Lake Villa', 18500)">
+                    BOOK THIS ROOM
+                </button>
+
+            </div>
 
         </div>
 
@@ -382,77 +277,100 @@
 </section>
 
 
-<!-- CULTURE -->
-<section class="culture">
+<!-- ================= SPA ================= -->
 
-    <div class="culture-image reveal">
+<section class="spa" id="spa">
 
-        <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=1400&q=90">
+    <div class="spa-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=90">
 
     </div>
 
-    <div class="culture-content reveal">
+    <div class="spa-content">
 
-        <p class="section-label">ANCIENT CULTURE</p>
+        <p class="label">
+            AYANA WELLNESS
+        </p>
 
         <h2>
-            Where Tradition
-            <em>Lives On</em>
+            Slow down.
+            <em>Breathe.</em>
         </h2>
 
         <p>
-            Kerala's beauty is not only found in its landscapes.
-            It lives in its art, food, festivals and traditions.
+            Experience traditional Kerala-inspired
+            wellness rituals designed to restore your
+            body and mind.
         </p>
 
-        <div class="culture-list">
 
-            <div>
-                <span>01</span>
-                <strong>Kathakali</strong>
+        <div class="spa-list">
+
+            <div class="spa-item">
+
+                <div>
+                    <span>01</span>
+                    <h3>Ayurvedic Massage</h3>
+                </div>
+
+                <strong>₹2,500</strong>
+
             </div>
 
-            <div>
-                <span>02</span>
-                <strong>Onam</strong>
+
+            <div class="spa-item">
+
+                <div>
+                    <span>02</span>
+                    <h3>Couple Spa</h3>
+                </div>
+
+                <strong>₹4,500</strong>
+
             </div>
 
-            <div>
-                <span>03</span>
-                <strong>Vallam Kali</strong>
+
+            <div class="spa-item">
+
+                <div>
+                    <span>03</span>
+                    <h3>Herbal Steam</h3>
+                </div>
+
+                <strong>₹1,500</strong>
+
             </div>
 
-            <div>
-                <span>04</span>
-                <strong>Ayurveda</strong>
+
+            <div class="spa-item">
+
+                <div>
+                    <span>04</span>
+                    <h3>Head & Shoulder Therapy</h3>
+                </div>
+
+                <strong>₹1,200</strong>
+
+            </div>
+
+
+            <div class="spa-item">
+
+                <div>
+                    <span>05</span>
+                    <h3>Full Body Ritual</h3>
+                </div>
+
+                <strong>₹3,800</strong>
+
             </div>
 
         </div>
 
-    </div>
-
-</section>
-
-
-<!-- CTA -->
-<section class="cta">
-
-    <div class="cta-inner reveal">
-
-        <p class="section-label">YOUR NEXT JOURNEY</p>
-
-        <h2>
-            Come Find
-            <em>Your Kerala</em>
-        </h2>
-
-        <p>
-            Sometimes the most beautiful journeys
-            are the ones that slow you down.
-        </p>
-
-        <button onclick="startJourney()" class="btn primary">
-            Start Exploring
+        <button class="gold-btn" onclick="openSpa()">
+            PRE-BOOK SPA
         </button>
 
     </div>
@@ -460,42 +378,337 @@
 </section>
 
 
-<!-- FOOTER -->
-<footer>
+<!-- ================= EXPERIENCES ================= -->
 
-    <div class="footer-logo">
-        കേരളം
-        <span>GOD'S OWN COUNTRY</span>
+<section class="experiences" id="experiences">
+
+    <div class="section-title">
+
+        <p class="label">
+            BEYOND THE RESORT
+        </p>
+
+        <h2>
+            Kerala
+            <em>Experiences</em>
+        </h2>
+
     </div>
 
-    <p>
-        Crafted with nature, culture & love.
-    </p>
 
-    <div class="footer-line"></div>
+    <div class="experience-grid">
 
-    <small>
-        © 2026 Kerala — God's Own Country
-    </small>
+        <div class="experience">
+
+            <span>01</span>
+
+            <div class="experience-icon">
+                🛶
+            </div>
+
+            <h3>Private Houseboat</h3>
+
+            <p>
+                Cruise through Kerala's beautiful
+                backwaters.
+            </p>
+
+            <strong>₹6,500</strong>
+
+        </div>
+
+
+        <div class="experience">
+
+            <span>02</span>
+
+            <div class="experience-icon">
+                🌿
+            </div>
+
+            <h3>Spice Garden Tour</h3>
+
+            <p>
+                Explore aromatic spice plantations
+                with a local guide.
+            </p>
+
+            <strong>₹1,800</strong>
+
+        </div>
+
+
+        <div class="experience">
+
+            <span>03</span>
+
+            <div class="experience-icon">
+                🌅
+            </div>
+
+            <h3>Sunset Cruise</h3>
+
+            <p>
+                Watch the golden Kerala sunset
+                from the water.
+            </p>
+
+            <strong>₹2,500</strong>
+
+        </div>
+
+
+        <div class="experience">
+
+            <span>04</span>
+
+            <div class="experience-icon">
+                🥥
+            </div>
+
+            <h3>Kerala Cooking Class</h3>
+
+            <p>
+                Learn traditional Kerala recipes
+                from local chefs.
+            </p>
+
+            <strong>₹2,000</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOKING CTA ================= -->
+
+<section class="booking-cta">
+
+    <div>
+
+        <p class="label">
+            YOUR PRIVATE ESCAPE
+        </p>
+
+        <h2>
+            Make your next
+            <em>memory here.</em>
+        </h2>
+
+        <button
+            class="gold-btn"
+            onclick="openBooking()">
+            CHECK AVAILABILITY
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="footer-brand">
+
+        <h2>AYANA</h2>
+
+        <p>
+            Kerala Luxury Retreat
+        </p>
+
+    </div>
+
+    <div>
+
+        <p>God's Own Country</p>
+        <p>Kerala, India</p>
+
+    </div>
+
+    <div>
+
+        <p>Reservations</p>
+        <p>+91 98765 43210</p>
+
+    </div>
+
+    <div>
+
+        <p>Email</p>
+        <p>stay@ayana.com</p>
+
+    </div>
 
 </footer>
 
 
-<!-- MODAL -->
-<div class="modal" id="placeModal">
+<!-- ================= BOOKING MODAL ================= -->
+
+<div class="modal" id="bookingModal">
 
     <div class="modal-box">
 
-        <button class="close-modal" onclick="closePlace()">×</button>
+        <button
+            class="close"
+            onclick="closeBooking()">
+            ×
+        </button>
 
-        <p class="section-label">DISCOVER</p>
+        <p class="label">
+            AYANA RESERVATION
+        </p>
 
-        <h2 id="modalTitle">Munnar</h2>
+        <h2>
+            Book Your
+            <em>Stay</em>
+        </h2>
 
-        <p id="modalText"></p>
 
-        <button class="btn primary" onclick="closePlace()">
-            Close
+        <label>
+            SELECT ROOM
+        </label>
+
+        <select id="roomSelect">
+
+            <option value="8500">
+                Forest Villa — ₹8,500/night
+            </option>
+
+            <option value="12500">
+                Pool Villa — ₹12,500/night
+            </option>
+
+            <option value="18500">
+                Royal Lake Villa — ₹18,500/night
+            </option>
+
+        </select>
+
+
+        <label>
+            CHECK-IN
+        </label>
+
+        <input
+            type="date"
+            id="checkin">
+
+
+        <label>
+            CHECK-OUT
+        </label>
+
+        <input
+            type="date"
+            id="checkout">
+
+
+        <label>
+            GUESTS
+        </label>
+
+        <select id="guests">
+
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+
+        </select>
+
+
+        <div class="booking-total">
+
+            <span>Estimated Total</span>
+
+            <strong id="totalPrice">
+                ₹8,500
+            </strong>
+
+        </div>
+
+
+        <button
+            class="gold-btn full"
+            onclick="confirmBooking()">
+
+            CONFIRM PRE-BOOKING
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SPA MODAL ================= -->
+
+<div class="modal" id="spaModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeSpa()">
+            ×
+        </button>
+
+        <p class="label">
+            AYANA WELLNESS
+        </p>
+
+        <h2>
+            Spa
+            <em>Booking</em>
+        </h2>
+
+
+        <label>
+            SELECT TREATMENT
+        </label>
+
+        <select id="spaSelect">
+
+            <option value="2500">
+                Ayurvedic Massage — ₹2,500
+            </option>
+
+            <option value="4500">
+                Couple Spa — ₹4,500
+            </option>
+
+            <option value="1500">
+                Herbal Steam — ₹1,500
+            </option>
+
+            <option value="1200">
+                Head & Shoulder Therapy — ₹1,200
+            </option>
+
+            <option value="3800">
+                Full Body Ritual — ₹3,800
+            </option>
+
+        </select>
+
+
+        <label>
+            SELECT DATE
+        </label>
+
+        <input type="date">
+
+
+        <button
+            class="gold-btn full"
+            onclick="confirmSpa()">
+
+            PRE-BOOK SPA
+
         </button>
 
     </div>
