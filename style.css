@@ -1,4 +1,24 @@
 
+.person-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #10251a;
+}
+
+.person-image .my-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transition: transform 0.8s ease;
+}
+
+.person-card:hover .my-photo {
+    transform: scale(1.06);
+}
+
 * {
     margin: 0;
     padding: 0;
