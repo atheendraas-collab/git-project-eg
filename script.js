@@ -1,12 +1,13 @@
 /* =========================
-   PAGE LOADER
+   LOADER
 ========================= */
 
 window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        document.querySelector(".loader")
+        document
+            .getElementById("loader")
             .classList.add("hide");
 
     }, 1200);
@@ -15,292 +16,272 @@ window.addEventListener("load", () => {
 
 
 /* =========================
-   FLOATING PARTICLES
+   BOOKING MODAL
 ========================= */
 
-const particleContainer =
-    document.querySelector(".particles");
+const bookingModal =
+    document.getElementById("bookingModal");
 
-for (let i = 0; i < 35; i++) {
+function openBooking() {
 
-    const particle = document.createElement("div");
+    bookingModal.classList.add("active");
 
-    particle.classList.add("particle");
+    document.body.style.overflow = "hidden";
 
-    particle.style.left =
-        Math.random() * 100 + "%";
+    calculateTotal();
+}
 
-    particle.style.animationDuration =
-        8 + Math.random() * 15 + "s";
 
-    particle.style.animationDelay =
-        Math.random() * 10 + "s";
+function closeBooking() {
 
-    particle.style.width =
-        2 + Math.random() * 3 + "px";
+    bookingModal.classList.remove("active");
 
-    particle.style.height =
-        particle.style.width;
+    document.body.style.overflow = "auto";
 
-    particleContainer.appendChild(particle);
 }
 
 
 /* =========================
-   SCROLL REVEAL
+   ROOM SELECTION
 ========================= */
 
-const reveals =
-    document.querySelectorAll(".reveal");
+function selectRoom(room, price) {
 
-const observer =
-    new IntersectionObserver(
+    openBooking();
 
-        (entries) => {
+    const select =
+        document.getElementById("roomSelect");
 
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("show");
-
-                    observer.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold: 0.12
-        }
-
-    );
-
-reveals.forEach(element => {
-    observer.observe(element);
-});
-
-
-/* =========================
-   DESTINATION DATA
-========================= */
-
-const places = {
-
-    Munnar: {
-        title: "Munnar",
-        text:
-            "A magical mountain destination surrounded by endless tea plantations, misty valleys, waterfalls and cool mountain air. Munnar is one of Kerala's most beautiful highland escapes."
-    },
-
-    Alappuzha: {
-        title: "Alappuzha",
-        text:
-            "Known for its beautiful backwaters and traditional houseboats. Cruise slowly through coconut-lined canals while village life unfolds around you."
-    },
-
-    Wayanad: {
-        title: "Wayanad",
-        text:
-            "A green paradise filled with forests, waterfalls, wildlife, caves and mist-covered mountains. Perfect for nature lovers and explorers."
-    },
-
-    Athirappilly: {
-        title: "Athirappilly",
-        text:
-            "Kerala's famous waterfall surrounded by lush tropical forests. The enormous cascade creates a spectacular natural landscape."
-    },
-
-    Varkala: {
-        title: "Varkala",
-        text:
-            "A beautiful coastal destination famous for its dramatic cliffs, golden beaches, Arabian Sea sunsets and relaxed atmosphere."
+    if (price == 8500) {
+        select.selectedIndex = 0;
     }
 
-};
+    if (price == 12500) {
+        select.selectedIndex = 1;
+    }
+
+    if (price == 18500) {
+        select.selectedIndex = 2;
+    }
+
+    calculateTotal();
+}
 
 
 /* =========================
-   OPEN MODAL
+   CALCULATE BOOKING PRICE
 ========================= */
 
-function openPlace(place) {
+const roomSelect =
+    document.getElementById("roomSelect");
 
-    const modal =
-        document.getElementById("placeModal");
+const checkin =
+    document.getElementById("checkin");
 
-    const title =
-        document.getElementById("modalTitle");
+const checkout =
+    document.getElementById("checkout");
 
-    const text =
-        document.getElementById("modalText");
 
-    title.textContent =
-        places[place].title;
+roomSelect.addEventListener(
+    "change",
+    calculateTotal
+);
 
-    text.textContent =
-        places[place].text;
+checkin.addEventListener(
+    "change",
+    calculateTotal
+);
 
-    modal.classList.add("active");
+checkout.addEventListener(
+    "change",
+    calculateTotal
+);
+
+
+function calculateTotal() {
+
+    const price =
+        Number(roomSelect.value);
+
+    let nights = 1;
+
+    if (
+        checkin.value &&
+        checkout.value
+    ) {
+
+        const start =
+            new Date(checkin.value);
+
+        const end =
+            new Date(checkout.value);
+
+        const difference =
+            end - start;
+
+        const calculated =
+            Math.ceil(
+                difference /
+                (1000 * 60 * 60 * 24)
+            );
+
+        if (calculated > 0) {
+            nights = calculated;
+        }
+
+    }
+
+    const total =
+        price * nights;
+
+    document.getElementById(
+        "totalPrice"
+    ).textContent =
+        "₹" +
+        total.toLocaleString("en-IN");
+
+}
+
+
+/* =========================
+   CONFIRM BOOKING
+========================= */
+
+function confirmBooking() {
+
+    if (
+        !checkin.value ||
+        !checkout.value
+    ) {
+
+        alert(
+            "Please select your check-in and check-out dates."
+        );
+
+        return;
+    }
+
+    alert(
+        "🎉 Pre-booking request received!\n\n" +
+        "Our reservation team will contact you shortly."
+    );
+
+    closeBooking();
+
+}
+
+
+/* =========================
+   SPA
+========================= */
+
+const spaModal =
+    document.getElementById("spaModal");
+
+
+function openSpa() {
+
+    spaModal.classList.add("active");
 
     document.body.style.overflow =
         "hidden";
+
 }
 
 
-/* =========================
-   CLOSE MODAL
-========================= */
+function closeSpa() {
 
-function closePlace() {
-
-    document
-        .getElementById("placeModal")
-        .classList.remove("active");
+    spaModal.classList.remove("active");
 
     document.body.style.overflow =
         "auto";
+
 }
 
 
-/* Close when clicking outside */
+function confirmSpa() {
 
-document
-    .getElementById("placeModal")
-    .addEventListener("click", function(e) {
+    const treatment =
+        document.getElementById(
+            "spaSelect"
+        );
 
-        if (e.target === this) {
-            closePlace();
-        }
+    alert(
+        "🌿 Spa pre-booking confirmed!\n\n" +
+        treatment.options[
+            treatment.selectedIndex
+        ].text
+    );
 
-    });
-
-
-/* =========================
-   ESCAPE KEY
-========================= */
-
-document.addEventListener("keydown", function(e) {
-
-    if (e.key === "Escape") {
-        closePlace();
-    }
-
-});
-
-
-/* =========================
-   START JOURNEY
-========================= */
-
-function startJourney() {
-
-    document
-        .getElementById("places")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    closeSpa();
 
 }
 
 
 /* =========================
-   PARALLAX EFFECT
+   CLOSE MODAL OUTSIDE
 ========================= */
 
-window.addEventListener("scroll", () => {
+bookingModal.addEventListener(
+    "click",
+    function(event) {
 
-    const scroll =
-        window.scrollY;
-
-    const hero =
-        document.querySelector(".hero-bg");
-
-    if (hero) {
-
-        hero.style.transform =
-            `scale(1.05) translateY(${scroll * 0.12}px)`;
+        if (event.target === bookingModal) {
+            closeBooking();
+        }
 
     }
+);
 
-});
+
+spaModal.addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === spaModal) {
+            closeSpa();
+        }
+
+    }
+);
 
 
 /* =========================
-   MOBILE MENU
+   ESCAPE
 ========================= */
 
-const menuBtn =
-    document.querySelector(".menu-btn");
+document.addEventListener(
+    "keydown",
+    event => {
 
-const nav =
-    document.querySelector(".navbar nav");
+        if (event.key === "Escape") {
 
-menuBtn.addEventListener("click", () => {
+            closeBooking();
+            closeSpa();
 
-    if (nav.style.display === "flex") {
-
-        nav.style.display = "none";
-
-    } else {
-
-        nav.style.display = "flex";
-
-        nav.style.position = "absolute";
-        nav.style.top = "90px";
-        nav.style.right = "6%";
-
-        nav.style.flexDirection = "column";
-
-        nav.style.background = "#071b14";
-
-        nav.style.padding = "25px";
-
-        nav.style.gap = "20px";
+        }
 
     }
-
-});
+);
 
 
 /* =========================
-   ACTIVE NAVIGATION
+   PARALLAX HERO
 ========================= */
 
-const sections =
-    document.querySelectorAll("section[id]");
+window.addEventListener(
+    "scroll",
+    () => {
 
-const links =
-    document.querySelectorAll(".navbar nav a");
+        const bg =
+            document.querySelector(
+                ".hero-bg"
+            );
 
-window.addEventListener("scroll", () => {
+        if (!bg) return;
 
-    let current = "";
+        bg.style.transform =
+            `scale(1.05) translateY(${window.scrollY * 0.12}px)`;
 
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop - 200;
-
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-
-    });
-
-    links.forEach(link => {
-
-        link.style.color = "";
-
-        if (
-            link.getAttribute("href") ===
-            "#" + current
-        ) {
-            link.style.color = "#d5a85c";
-        }
-
-    });
-
-});
+    }
+);
