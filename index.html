@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VÉLOCÉ | Luxury Car Collection</title>
+    <title>WANDER | Explore Amazing Places</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -18,30 +15,26 @@
 
 <!-- LOADER -->
 <div class="loader" id="loader">
-    <div class="loader-logo">VÉLOCÉ<span>.</span></div>
-    <div class="loader-line"></div>
+    <div class="loader-logo">WANDER<span>.</span></div>
+    <p>DISCOVER THE WORLD</p>
 </div>
 
 
-<!-- NAVIGATION -->
+<!-- NAVBAR -->
 <header class="navbar">
 
     <div class="logo">
-        VÉLOCÉ<span>.</span>
+        WANDER<span>.</span>
     </div>
 
     <nav id="nav">
         <a href="#home">Home</a>
-        <a href="#brands">Brands</a>
-        <a href="#collection">Collection</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#experiences">Experiences</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
     </nav>
 
-    <div class="nav-actions">
-        <button id="favoriteNav">♡ <span id="favoriteCount">0</span></button>
-        <button class="menu-button" id="menuButton">☰</button>
-    </div>
+    <button class="menu" id="menu">☰</button>
 
 </header>
 
@@ -49,271 +42,238 @@
 <!-- HERO -->
 <section class="hero" id="home">
 
-    <div class="hero-background"></div>
-
+    <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
 
-        <div class="hero-label">
-            THE WORLD OF AUTOMOTIVE EXCELLENCE
-        </div>
+        <span class="eyebrow">
+            DISCOVER • EXPERIENCE • REMEMBER
+        </span>
 
         <h1>
-            DRIVE
-            <span>BEYOND</span>
-            ORDINARY.
+            FIND YOUR
+            <em>WILD.</em>
         </h1>
 
         <p>
-            Discover an extraordinary collection of the world's
-            most prestigious automobiles, from BMW M legends to
-            Rolls-Royce masterpieces.
+            Explore breathtaking destinations, hidden gems,
+            peaceful beaches, majestic mountains and unforgettable
+            experiences around the world.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#collection" class="gold-button">
-                Explore Collection
-                <span>→</span>
+            <a href="#destinations" class="primary-btn">
+                Explore Places →
             </a>
 
-            <a href="#brands" class="outline-button">
-                Explore Brands
+            <a href="#experiences" class="secondary-btn">
+                View Experiences
             </a>
 
         </div>
 
     </div>
 
-    <div class="hero-bottom">
-
-        <span>SCROLL TO DISCOVER</span>
-
-        <div class="scroll-line"></div>
-
+    <div class="hero-scroll">
+        SCROLL TO EXPLORE
+        <span></span>
     </div>
 
 </section>
 
 
-<!-- STATISTICS -->
-<section class="statistics">
+<!-- STATS -->
+<section class="stats">
 
-    <div class="stat">
-        <strong>80+</strong>
-        <span>ICONIC CARS</span>
+    <div>
+        <strong>100+</strong>
+        <span>DESTINATIONS</span>
     </div>
 
-    <div class="stat">
-        <strong>15</strong>
-        <span>LUXURY BRANDS</span>
+    <div>
+        <strong>35+</strong>
+        <span>COUNTRIES</span>
     </div>
 
-    <div class="stat">
-        <strong>12</strong>
-        <span>CAR CATEGORIES</span>
+    <div>
+        <strong>250+</strong>
+        <span>EXPERIENCES</span>
     </div>
 
-    <div class="stat">
+    <div>
         <strong>∞</strong>
-        <span>AUTOMOTIVE PASSION</span>
+        <span>ADVENTURES</span>
     </div>
 
 </section>
 
 
-<!-- BRANDS -->
-<section class="brands-section" id="brands">
+<!-- DESTINATIONS -->
+<section class="destinations" id="destinations">
 
-    <div class="section-title center">
+    <div class="section-heading">
 
-        <span>PRESTIGE BRANDS</span>
-
-        <h2>
-            The world's most
-            <em>desirable</em> automobiles.
-        </h2>
-
-    </div>
-
-    <div class="brand-grid">
-
-        <button class="brand-card" data-brand="BMW">
-            <span class="brand-symbol">BMW</span>
-            <small>BAVARIAN MOTOR WORKS</small>
-        </button>
-
-        <button class="brand-card" data-brand="Rolls-Royce">
-            <span class="brand-symbol">RR</span>
-            <small>ROLLS-ROYCE</small>
-        </button>
-
-        <button class="brand-card" data-brand="Mercedes">
-            <span class="brand-symbol">✦</span>
-            <small>MERCEDES-BENZ</small>
-        </button>
-
-        <button class="brand-card" data-brand="Porsche">
-            <span class="brand-symbol">PORSCHE</span>
-            <small>PORSCHE AG</small>
-        </button>
-
-        <button class="brand-card" data-brand="Ferrari">
-            <span class="brand-symbol">FERRARI</span>
-            <small>FERRARI</small>
-        </button>
-
-        <button class="brand-card" data-brand="Lamborghini">
-            <span class="brand-symbol">LAMBORGHINI</span>
-            <small>AUTOMOBILI</small>
-        </button>
-
-        <button class="brand-card" data-brand="Bentley">
-            <span class="brand-symbol">B</span>
-            <small>BENTLEY MOTORS</small>
-        </button>
-
-        <button class="brand-card" data-brand="McLaren">
-            <span class="brand-symbol">McLAREN</span>
-            <small>McLAREN AUTOMOTIVE</small>
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- COLLECTION -->
-<section class="collection" id="collection">
-
-    <div class="collection-header">
-
-        <div class="section-title">
-
-            <span>THE COLLECTION</span>
+        <div>
+            <span>PLACES TO DISCOVER</span>
 
             <h2>
-                Automotive
-                <em>Masterpieces.</em>
+                Where will you
+                <em>go next?</em>
             </h2>
-
         </div>
 
         <p>
-            Browse our curated selection of performance,
-            luxury, electric and ultra-exclusive automobiles.
+            From tropical beaches to misty mountains,
+            discover destinations that deserve a place
+            on your travel list.
         </p>
-
-    </div>
-
-
-    <!-- FILTER BAR -->
-    <div class="filter-bar">
-
-        <button class="filter active" data-filter="all">
-            All Cars
-        </button>
-
-        <button class="filter" data-filter="BMW">
-            BMW
-        </button>
-
-        <button class="filter" data-filter="Rolls-Royce">
-            Rolls-Royce
-        </button>
-
-        <button class="filter" data-filter="Mercedes">
-            Mercedes
-        </button>
-
-        <button class="filter" data-filter="Porsche">
-            Porsche
-        </button>
-
-        <button class="filter" data-filter="Ferrari">
-            Ferrari
-        </button>
-
-        <button class="filter" data-filter="Lamborghini">
-            Lamborghini
-        </button>
-
-        <button class="filter" data-filter="Bentley">
-            Bentley
-        </button>
-
-        <button class="filter" data-filter="McLaren">
-            McLaren
-        </button>
 
     </div>
 
 
     <!-- SEARCH -->
-    <div class="tools">
+    <div class="search-area">
 
-        <div class="search">
-
+        <div class="search-box">
             <span>⌕</span>
 
             <input
                 type="text"
                 id="search"
-                placeholder="Search BMW M5, Phantom, Cullinan..."
+                placeholder="Search places..."
             >
-
         </div>
-
-        <select id="category">
-
-            <option value="all">All Categories</option>
-            <option value="sedan">Sedan</option>
-            <option value="suv">SUV</option>
-            <option value="coupe">Coupe</option>
-            <option value="supercar">Supercar</option>
-            <option value="electric">Electric</option>
-            <option value="convertible">Convertible</option>
-
-        </select>
 
     </div>
 
 
-    <!-- CAR GRID -->
-    <div class="car-grid" id="carGrid"></div>
+    <!-- FILTERS -->
+    <div class="filters">
+
+        <button class="filter active" data-category="all">
+            All
+        </button>
+
+        <button class="filter" data-category="beach">
+            Beaches
+        </button>
+
+        <button class="filter" data-category="mountain">
+            Mountains
+        </button>
+
+        <button class="filter" data-category="city">
+            Cities
+        </button>
+
+        <button class="filter" data-category="forest">
+            Forests
+        </button>
+
+        <button class="filter" data-category="waterfall">
+            Waterfalls
+        </button>
+
+        <button class="filter" data-category="heritage">
+            Heritage
+        </button>
+
+    </div>
+
+
+    <!-- DESTINATION GRID -->
+    <div class="place-grid" id="placeGrid"></div>
 
     <div class="no-results" id="noResults">
-        No cars found.
+        No destination found.
     </div>
 
 </section>
 
 
-<!-- FEATURE -->
-<section class="feature">
+<!-- FEATURED EXPERIENCE -->
+<section class="experience" id="experiences">
 
-    <div class="feature-image"></div>
+    <div class="experience-image"></div>
 
-    <div class="feature-content">
+    <div class="experience-content">
 
-        <span>THE VÉLOCÉ EXPERIENCE</span>
+        <span>THE ART OF EXPLORING</span>
 
         <h2>
-            Luxury is not
-            <em>just a destination.</em>
+            Travel is the
+            <em>story you live.</em>
         </h2>
 
         <p>
-            From the instant you discover your dream automobile
-            to the moment you turn the key, every detail matters.
-            VÉLOCÉ brings together performance, craftsmanship,
-            technology and timeless automotive design.
+            Wake up somewhere you've never been.
+            Follow roads you've never travelled.
+            Meet people you'll never forget.
         </p>
 
-        <a href="#contact" class="gold-button">
-            Begin Your Journey →
+        <a href="#destinations" class="primary-btn">
+            Start Exploring →
         </a>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE CARDS -->
+<section class="experience-list">
+
+    <div class="section-heading center">
+
+        <span>UNFORGETTABLE EXPERIENCES</span>
+
+        <h2>
+            Make memories,
+            <em>not plans.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="experience-grid">
+
+        <article>
+            <div class="experience-icon">🏔️</div>
+            <h3>Mountain Adventures</h3>
+            <p>
+                Chase clouds, climb peaks and discover
+                breathtaking mountain landscapes.
+            </p>
+        </article>
+
+        <article>
+            <div class="experience-icon">🌊</div>
+            <h3>Ocean Escapes</h3>
+            <p>
+                Discover crystal-clear water, hidden beaches
+                and peaceful coastal destinations.
+            </p>
+        </article>
+
+        <article>
+            <div class="experience-icon">🌲</div>
+            <h3>Wild Forests</h3>
+            <p>
+                Escape into nature and explore untouched
+                forests filled with life.
+            </p>
+        </article>
+
+        <article>
+            <div class="experience-icon">🏛️</div>
+            <h3>Ancient Places</h3>
+            <p>
+                Walk through historic streets, monuments
+                and fascinating cultural landmarks.
+            </p>
+        </article>
 
     </div>
 
@@ -325,11 +285,11 @@
 
     <div class="about-title">
 
-        <span>OUR PHILOSOPHY</span>
+        <span>WHY WANDER?</span>
 
         <h2>
-            Machines
-            <em>with a soul.</em>
+            The world is
+            <em>waiting.</em>
         </h2>
 
     </div>
@@ -337,20 +297,17 @@
     <div class="about-text">
 
         <p>
-            We believe a truly exceptional automobile is more
-            than transportation. It is engineering, design,
-            craftsmanship and emotion brought together.
+            We created WANDER for people who believe the best
+            moments happen outside their comfort zone.
         </p>
 
         <p>
-            Our collection celebrates everything from the precision
-            of BMW M engineering to the handcrafted elegance of
-            Rolls-Royce.
+            Find inspiration for your next trip, discover hidden
+            destinations and create your own adventure.
         </p>
 
-        <div class="about-number">
-            <strong>01</strong>
-            <span>EXCEPTIONAL BY DESIGN</span>
+        <div class="quote">
+            “Not all those who wander are lost.”
         </div>
 
     </div>
@@ -358,25 +315,24 @@
 </section>
 
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
+<!-- CTA -->
+<section class="cta">
 
-    <span>PRIVATE COLLECTION</span>
+    <span>YOUR NEXT ADVENTURE</span>
 
     <h2>
-        Your next
-        <em>masterpiece</em>
-        awaits.
+        Go somewhere
+        <em>beautiful.</em>
     </h2>
 
     <p>
-        Connect with our automotive specialists
-        and discover your dream machine.
+        Pack your bag. Pick a destination.
+        Let the adventure begin.
     </p>
 
-    <button class="gold-button" id="contactButton">
-        Contact Collection →
-    </button>
+    <a href="#destinations" class="primary-btn">
+        Explore Destinations →
+    </a>
 
 </section>
 
@@ -384,87 +340,84 @@
 <!-- FOOTER -->
 <footer>
 
-    <div class="footer-top">
+    <div class="footer-main">
 
-        <div class="footer-brand">
-            VÉLOCÉ<span>.</span>
+        <div class="footer-logo">
+            WANDER<span>.</span>
         </div>
 
         <p>
-            A private collection of extraordinary automobiles.
+            Discover beautiful places.
+            Create unforgettable memories.
         </p>
 
         <div class="socials">
             <a href="#">Instagram</a>
             <a href="#">YouTube</a>
-            <a href="#">Facebook</a>
+            <a href="#">Pinterest</a>
         </div>
 
     </div>
 
     <div class="footer-bottom">
 
-        <span>© 2026 VÉLOCÉ AUTOMOTIVE</span>
+        <span>© 2026 WANDER TRAVEL</span>
 
-        <span>CRAFTED FOR AUTOMOTIVE ENTHUSIASTS</span>
+        <span>EXPLORE • DREAM • DISCOVER</span>
 
     </div>
 
 </footer>
 
 
-<!-- CAR MODAL -->
+<!-- PLACE MODAL -->
 <div class="modal" id="modal">
 
     <div class="modal-box">
 
-        <button class="modal-close" id="modalClose">
+        <button class="close" id="close">
             ×
         </button>
 
         <div class="modal-image">
-            <img id="modalImage" src="" alt="Car">
+            <img id="modalImage" src="" alt="">
         </div>
 
-        <div class="modal-info">
+        <div class="modal-content">
 
-            <span id="modalBrand">
-                BRAND
+            <span id="modalCategory">
+                DESTINATION
             </span>
 
-            <h2 id="modalName">
-                Car Name
+            <h2 id="modalTitle">
+                Place
             </h2>
 
             <p id="modalDescription">
                 Description
             </p>
 
-            <div class="modal-specs">
+            <div class="modal-info">
 
                 <div>
-                    <span>POWER</span>
-                    <strong id="modalPower">---</strong>
+                    <small>LOCATION</small>
+                    <strong id="modalLocation"></strong>
                 </div>
 
                 <div>
-                    <span>0–100 KM/H</span>
-                    <strong id="modalAcceleration">---</strong>
+                    <small>BEST TIME</small>
+                    <strong id="modalTime"></strong>
                 </div>
 
                 <div>
-                    <span>TOP SPEED</span>
-                    <strong id="modalSpeed">---</strong>
+                    <small>EXPERIENCE</small>
+                    <strong id="modalExperience"></strong>
                 </div>
 
             </div>
 
-            <div class="modal-price" id="modalPrice">
-                $000,000
-            </div>
-
-            <button class="gold-button">
-                Request Private Viewing →
+            <button class="primary-btn">
+                Plan This Adventure →
             </button>
 
         </div>
