@@ -1,559 +1,306 @@
-/* =====================================
-   DESTINATION DATABASE
-===================================== */
-
-const places = [
-
-    {
-        name: "Munnar",
-        category: "mountain",
-        location: "Kerala, India",
-        time: "September – March",
-        experience: "Tea Hills",
-        image: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "A breathtaking hill station surrounded by endless tea plantations, misty mountains and peaceful valleys."
-    },
-
-    {
-        name: "Varkala",
-        category: "beach",
-        location: "Kerala, India",
-        time: "October – March",
-        experience: "Cliff & Beach",
-        image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "A spectacular coastal destination famous for dramatic cliffs, golden beaches and beautiful sunsets."
-    },
-
-    {
-        name: "Alappuzha",
-        category: "waterfall",
-        location: "Kerala, India",
-        time: "November – February",
-        experience: "Backwaters",
-        image: "https://images.unsplash.com/photo-1602305762777-3d0a8e1f5f07?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Experience Kerala's legendary backwaters, traditional houseboats and peaceful waterways."
-    },
-
-    {
-        name: "Wayanad",
-        category: "forest",
-        location: "Kerala, India",
-        time: "October – May",
-        experience: "Wild Nature",
-        image: "https://images.unsplash.com/photo-1605538883669-825200433431?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "A green paradise filled with forests, waterfalls, wildlife and spectacular mountain landscapes."
-    },
-
-    {
-        name: "Fort Kochi",
-        category: "heritage",
-        location: "Kerala, India",
-        time: "October – March",
-        experience: "History & Culture",
-        image: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Explore historic streets, colonial architecture, art cafés and the iconic Chinese fishing nets."
-    },
-
-    {
-        name: "Thekkady",
-        category: "forest",
-        location: "Kerala, India",
-        time: "October – February",
-        experience: "Wildlife",
-        image: "https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Discover one of Kerala's most beautiful wildlife regions surrounded by dense forests."
-    },
-
-    {
-        name: "Athirappilly",
-        category: "waterfall",
-        location: "Kerala, India",
-        time: "June – January",
-        experience: "Waterfall",
-        image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Kerala's spectacular waterfall surrounded by lush tropical forests."
-    },
-
-    {
-        name: "Kovalam",
-        category: "beach",
-        location: "Kerala, India",
-        time: "October – March",
-        experience: "Beach Escape",
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Relax beside palm-lined beaches and watch unforgettable Arabian Sea sunsets."
-    },
-
-    {
-        name: "Paris",
-        category: "city",
-        location: "France",
-        time: "April – October",
-        experience: "Culture & Romance",
-        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Discover timeless architecture, art, cafés and iconic landmarks in the City of Light."
-    },
-
-    {
-        name: "Santorini",
-        category: "beach",
-        location: "Greece",
-        time: "May – October",
-        experience: "Island Escape",
-        image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Whitewashed buildings, blue domes and incredible Mediterranean sunsets."
-    },
-
-    {
-        name: "Swiss Alps",
-        category: "mountain",
-        location: "Switzerland",
-        time: "December – March",
-        experience: "Snow Adventure",
-        image: "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Experience dramatic alpine peaks, snowy landscapes and unforgettable mountain adventures."
-    },
-
-    {
-        name: "Bali",
-        category: "forest",
-        location: "Indonesia",
-        time: "April – October",
-        experience: "Tropical Escape",
-        image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Explore tropical forests, waterfalls, temples and beautiful island landscapes."
-    },
-
-    {
-        name: "Dubai",
-        category: "city",
-        location: "UAE",
-        time: "November – March",
-        experience: "Luxury",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "A futuristic city filled with incredible architecture, luxury experiences and desert adventures."
-    },
-
-    {
-        name: "Kyoto",
-        category: "heritage",
-        location: "Japan",
-        time: "March – May",
-        experience: "Japanese Culture",
-        image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Walk through ancient temples, peaceful gardens and beautiful traditional streets."
-    },
-
-    {
-        name: "Iceland",
-        category: "mountain",
-        location: "Iceland",
-        time: "September – March",
-        experience: "Northern Lights",
-        image: "https://images.unsplash.com/photo-1520769945061-0a448c463865?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Chase waterfalls, glaciers, volcanic landscapes and the magical Northern Lights."
-    },
-
-    {
-        name: "Maldives",
-        category: "beach",
-        location: "Maldives",
-        time: "November – April",
-        experience: "Island Luxury",
-        image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1400&q=90",
-        description:
-            "Crystal-clear lagoons, private islands and some of the world's most beautiful beaches."
-    }
-
-];
-
-
-/* =====================================
-   ELEMENTS
-===================================== */
-
-const grid =
-    document.getElementById("placeGrid");
-
-const search =
-    document.getElementById("search");
-
-const filters =
-    document.querySelectorAll(".filter");
-
-const noResults =
-    document.getElementById("noResults");
-
-const modal =
-    document.getElementById("modal");
-
-const close =
-    document.getElementById("close");
-
-let currentCategory = "all";
-
-
-/* =====================================
-   LOADER
-===================================== */
+/* =========================
+   PAGE LOADER
+========================= */
 
 window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        document
-            .getElementById("loader")
+        document.querySelector(".loader")
             .classList.add("hide");
 
-    }, 900);
+    }, 1200);
 
 });
 
 
-/* =====================================
-   DISPLAY PLACES
-===================================== */
+/* =========================
+   FLOATING PARTICLES
+========================= */
 
-function displayPlaces() {
+const particleContainer =
+    document.querySelector(".particles");
 
-    const searchValue =
-        search.value.toLowerCase().trim();
+for (let i = 0; i < 35; i++) {
 
+    const particle = document.createElement("div");
 
-    const filtered =
-        places.filter(place => {
+    particle.classList.add("particle");
 
-            const categoryMatch =
-                currentCategory === "all" ||
-                place.category === currentCategory;
+    particle.style.left =
+        Math.random() * 100 + "%";
 
+    particle.style.animationDuration =
+        8 + Math.random() * 15 + "s";
 
-            const searchMatch =
-                place.name
-                    .toLowerCase()
-                    .includes(searchValue) ||
+    particle.style.animationDelay =
+        Math.random() * 10 + "s";
 
-                place.location
-                    .toLowerCase()
-                    .includes(searchValue) ||
+    particle.style.width =
+        2 + Math.random() * 3 + "px";
 
-                place.experience
-                    .toLowerCase()
-                    .includes(searchValue);
+    particle.style.height =
+        particle.style.width;
 
-
-            return categoryMatch && searchMatch;
-
-        });
-
-
-    grid.innerHTML = "";
-
-
-    if (filtered.length === 0) {
-
-        noResults.style.display = "block";
-
-        return;
-
-    }
-
-
-    noResults.style.display = "none";
-
-
-    filtered.forEach((place, index) => {
-
-        const card =
-            document.createElement("article");
-
-        card.className = "place-card";
-
-
-        card.innerHTML = `
-
-            <div class="place-image">
-
-                <img
-                    src="${place.image}"
-                    alt="${place.name}"
-                    loading="lazy"
-                >
-
-                <div class="place-tag">
-                    ${place.category.toUpperCase()}
-                </div>
-
-            </div>
-
-            <div class="place-content">
-
-                <small>
-                    ${place.location}
-                </small>
-
-                <h3>
-                    ${place.name}
-                </h3>
-
-                <p>
-                    ${place.description}
-                </p>
-
-                <button
-                    class="view-place"
-                    data-name="${place.name}"
-                >
-                    Discover Place →
-                </button>
-
-            </div>
-        `;
-
-
-        grid.appendChild(card);
-
-
-        setTimeout(() => {
-
-            card.classList.add("show");
-
-        }, index * 80);
-
-    });
-
-
-    attachEvents();
-
+    particleContainer.appendChild(particle);
 }
 
 
-/* =====================================
-   CARD EVENTS
-===================================== */
+/* =========================
+   SCROLL REVEAL
+========================= */
 
-function attachEvents() {
+const reveals =
+    document.querySelectorAll(".reveal");
 
-    document
-        .querySelectorAll(".view-place")
-        .forEach(button => {
+const observer =
+    new IntersectionObserver(
 
-            button.addEventListener(
-                "click",
-                () => {
+        (entries) => {
 
-                    openModal(
-                        button.dataset.name
-                    );
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(entry.target);
 
                 }
-            );
 
-        });
+            });
 
-}
+        },
 
+        {
+            threshold: 0.12
+        }
 
-/* =====================================
-   MODAL
-===================================== */
+    );
 
-function openModal(name) {
-
-    const place =
-        places.find(
-            item => item.name === name
-        );
-
-    if (!place) return;
+reveals.forEach(element => {
+    observer.observe(element);
+});
 
 
-    document.getElementById(
-        "modalImage"
-    ).src = place.image;
+/* =========================
+   DESTINATION DATA
+========================= */
+
+const places = {
+
+    Munnar: {
+        title: "Munnar",
+        text:
+            "A magical mountain destination surrounded by endless tea plantations, misty valleys, waterfalls and cool mountain air. Munnar is one of Kerala's most beautiful highland escapes."
+    },
+
+    Alappuzha: {
+        title: "Alappuzha",
+        text:
+            "Known for its beautiful backwaters and traditional houseboats. Cruise slowly through coconut-lined canals while village life unfolds around you."
+    },
+
+    Wayanad: {
+        title: "Wayanad",
+        text:
+            "A green paradise filled with forests, waterfalls, wildlife, caves and mist-covered mountains. Perfect for nature lovers and explorers."
+    },
+
+    Athirappilly: {
+        title: "Athirappilly",
+        text:
+            "Kerala's famous waterfall surrounded by lush tropical forests. The enormous cascade creates a spectacular natural landscape."
+    },
+
+    Varkala: {
+        title: "Varkala",
+        text:
+            "A beautiful coastal destination famous for its dramatic cliffs, golden beaches, Arabian Sea sunsets and relaxed atmosphere."
+    }
+
+};
 
 
-    document.getElementById(
-        "modalCategory"
-    ).textContent =
-        place.category.toUpperCase();
+/* =========================
+   OPEN MODAL
+========================= */
 
+function openPlace(place) {
 
-    document.getElementById(
-        "modalTitle"
-    ).textContent =
-        place.name;
+    const modal =
+        document.getElementById("placeModal");
 
+    const title =
+        document.getElementById("modalTitle");
 
-    document.getElementById(
-        "modalDescription"
-    ).textContent =
-        place.description;
+    const text =
+        document.getElementById("modalText");
 
+    title.textContent =
+        places[place].title;
 
-    document.getElementById(
-        "modalLocation"
-    ).textContent =
-        place.location;
+    text.textContent =
+        places[place].text;
 
-
-    document.getElementById(
-        "modalTime"
-    ).textContent =
-        place.time;
-
-
-    document.getElementById(
-        "modalExperience"
-    ).textContent =
-        place.experience;
-
-
-    modal.classList.add("show");
+    modal.classList.add("active");
 
     document.body.style.overflow =
         "hidden";
-
 }
 
 
-function closeModal() {
+/* =========================
+   CLOSE MODAL
+========================= */
 
-    modal.classList.remove("show");
+function closePlace() {
+
+    document
+        .getElementById("placeModal")
+        .classList.remove("active");
 
     document.body.style.overflow =
         "auto";
-
 }
 
 
-close.addEventListener(
-    "click",
-    closeModal
-);
+/* Close when clicking outside */
 
+document
+    .getElementById("placeModal")
+    .addEventListener("click", function(e) {
 
-modal.addEventListener(
-    "click",
-    event => {
-
-        if (event.target === modal) {
-
-            closeModal();
-
+        if (e.target === this) {
+            closePlace();
         }
-
-    }
-);
-
-
-document.addEventListener(
-    "keydown",
-    event => {
-
-        if (event.key === "Escape") {
-
-            closeModal();
-
-        }
-
-    }
-);
-
-
-/* =====================================
-   FILTERS
-===================================== */
-
-filters.forEach(button => {
-
-    button.addEventListener(
-        "click",
-        () => {
-
-            filters.forEach(btn =>
-                btn.classList.remove("active")
-            );
-
-
-            button.classList.add("active");
-
-
-            currentCategory =
-                button.dataset.category;
-
-
-            displayPlaces();
-
-        }
-    );
-
-});
-
-
-/* =====================================
-   SEARCH
-===================================== */
-
-search.addEventListener(
-    "input",
-    displayPlaces
-);
-
-
-/* =====================================
-   MOBILE MENU
-===================================== */
-
-const menu =
-    document.getElementById("menu");
-
-const nav =
-    document.getElementById("nav");
-
-
-menu.addEventListener(
-    "click",
-    () => {
-
-        nav.classList.toggle("open");
-
-    }
-);
-
-
-nav.querySelectorAll("a")
-    .forEach(link => {
-
-        link.addEventListener(
-            "click",
-            () => {
-
-                nav.classList.remove("open");
-
-            }
-        );
 
     });
 
 
-/* =====================================
-   INITIAL DISPLAY
-===================================== */
+/* =========================
+   ESCAPE KEY
+========================= */
 
-displayPlaces();
+document.addEventListener("keydown", function(e) {
+
+    if (e.key === "Escape") {
+        closePlace();
+    }
+
+});
+
+
+/* =========================
+   START JOURNEY
+========================= */
+
+function startJourney() {
+
+    document
+        .getElementById("places")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =========================
+   PARALLAX EFFECT
+========================= */
+
+window.addEventListener("scroll", () => {
+
+    const scroll =
+        window.scrollY;
+
+    const hero =
+        document.querySelector(".hero-bg");
+
+    if (hero) {
+
+        hero.style.transform =
+            `scale(1.05) translateY(${scroll * 0.12}px)`;
+
+    }
+
+});
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn =
+    document.querySelector(".menu-btn");
+
+const nav =
+    document.querySelector(".navbar nav");
+
+menuBtn.addEventListener("click", () => {
+
+    if (nav.style.display === "flex") {
+
+        nav.style.display = "none";
+
+    } else {
+
+        nav.style.display = "flex";
+
+        nav.style.position = "absolute";
+        nav.style.top = "90px";
+        nav.style.right = "6%";
+
+        nav.style.flexDirection = "column";
+
+        nav.style.background = "#071b14";
+
+        nav.style.padding = "25px";
+
+        nav.style.gap = "20px";
+
+    }
+
+});
+
+
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
+
+const sections =
+    document.querySelectorAll("section[id]");
+
+const links =
+    document.querySelectorAll(".navbar nav a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop =
+            section.offsetTop - 200;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    links.forEach(link => {
+
+        link.style.color = "";
+
+        if (
+            link.getAttribute("href") ===
+            "#" + current
+        ) {
+            link.style.color = "#d5a85c";
+        }
+
+    });
+
+});
