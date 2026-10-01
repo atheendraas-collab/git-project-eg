@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VÉLOCÉ — Premium Car Collection</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        VÉLOCÉ<span>.</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <p class="small-title">THE ART OF AUTOMOTIVE EXCELLENCE</p>
+
+        <h1>
+            DRIVE<br>
+            <span>THE EXTRAORDINARY.</span>
+        </h1>
+
+        <p class="hero-description">
+            Discover an exclusive collection of the world's most
+            extraordinary performance and luxury automobiles.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#collection" class="primary-btn">
+                Explore Collection →
+            </a>
+
+            <a href="#about" class="secondary-btn">
+                Our Story
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-scroll">
+        SCROLL TO EXPLORE
+        <span>↓</span>
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+<section class="stats">
+
+    <div class="stat">
+        <h2>42</h2>
+        <p>EXCLUSIVE CARS</p>
+    </div>
+
+    <div class="stat">
+        <h2>18</h2>
+        <p>BRANDS</p>
+    </div>
+
+    <div class="stat">
+        <h2>12</h2>
+        <p>YEARS OF PASSION</p>
+    </div>
+
+    <div class="stat">
+        <h2>100%</h2>
+        <p>AUTOMOTIVE PASSION</p>
+    </div>
+
+</section>
+
+
+<!-- COLLECTION -->
+<section class="collection" id="collection">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">CURATED COLLECTION</p>
+            <h2>Icons of <span>Performance.</span></h2>
+        </div>
+
+        <p class="section-description">
+            A handpicked selection of automotive masterpieces,
+            each chosen for its design, performance and character.
+        </p>
+    </div>
+
+
+    <!-- FILTERS -->
+    <div class="filters">
+
+        <button class="filter active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter" data-filter="supercar">
+            Supercars
+        </button>
+
+        <button class="filter" data-filter="luxury">
+            Luxury
+        </button>
+
+        <button class="filter" data-filter="suv">
+            SUVs
+        </button>
+
+        <button class="filter" data-filter="electric">
+            Electric
+        </button>
+
+    </div>
+
+
+    <!-- SEARCH -->
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search your dream car..."
+        >
+        <span>⌕</span>
+    </div>
+
+
+    <!-- CARS -->
+    <div class="car-grid" id="carGrid">
+
+        <!-- CAR 1 -->
+        <article class="car-card" data-category="supercar" data-name="Ferrari 296 GTB">
+
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1200&q=90">
+
+                <span class="tag">SUPER CAR</span>
+
+                <button class="heart">♡</button>
+            </div>
+
+            <div class="car-info">
+                <p>FERRARI</p>
+                <h3>296 GTB</h3>
+
+                <div class="car-details">
+                    <span>830 HP</span>
+                    <span>2.9s 0-100</span>
+                    <span>330 KM/H</span>
+                </div>
+
+                <div class="card-bottom">
+                    <strong>$342,000</strong>
+
+                    <button
+                        class="details-btn"
+                        data-car="Ferrari 296 GTB"
+                        data-price="$342,000"
+                        data-power="830 HP"
+                        data-speed="330 KM/H"
+                        data-image="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1200&q=90">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <!-- CAR 2 -->
+        <article class="car-card" data-category="luxury" data-name="Rolls Royce Phantom">
+
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1631295868223-63265b40d9b4?auto=format&fit=crop&w=1200&q=90">
+
+                <span class="tag">LUXURY</span>
+
+                <button class="heart">♡</button>
+            </div>
+
+            <div class="car-info">
+                <p>ROLLS-ROYCE</p>
+                <h3>Phantom</h3>
+
+                <div class="car-details">
+                    <span>563 HP</span>
+                    <span>5.3s 0-100</span>
+                    <span>250 KM/H</span>
+                </div>
+
+                <div class="card-bottom">
+                    <strong>$505,000</strong>
+
+                    <button
+                        class="details-btn"
+                        data-car="Rolls-Royce Phantom"
+                        data-price="$505,000"
+                        data-power="563 HP"
+                        data-speed="250 KM/H"
+                        data-image="https://images.unsplash.com/photo-1631295868223-63265b40d9b4?auto=format&fit=crop&w=1200&q=90">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <!-- CAR 3 -->
+        <article class="car-card" data-category="supercar" data-name="Lamborghini Aventador">
+
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1200&q=90">
+
+                <span class="tag">SUPERCAR</span>
+
+                <button class="heart">♡</button>
+            </div>
+
+            <div class="car-info">
+                <p>LAMBORGHINI</p>
+                <h3>Aventador</h3>
+
+                <div class="car-details">
+                    <span>769 HP</span>
+                    <span>2.8s 0-100</span>
+                    <span>350 KM/H</span>
+                </div>
+
+                <div class="card-bottom">
+                    <strong>$550,000</strong>
+
+                    <button
+                        class="details-btn"
+                        data-car="Lamborghini Aventador"
+                        data-price="$550,000"
+                        data-power="769 HP"
+                        data-speed="350 KM/H"
+                        data-image="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1200&q=90">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <!-- CAR 4 -->
+        <article class="car-card" data-category="electric" data-name="Porsche Taycan">
+
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1611651338412-8403fa6e3599?auto=format&fit=crop&w=1200&q=90">
+
+                <span class="tag">ELECTRIC</span>
+
+                <button class="heart">♡</button>
+            </div>
+
+            <div class="car-info">
+                <p>PORSCHE</p>
+                <h3>Taycan Turbo S</h3>
+
+                <div class="car-details">
+                    <span>750 HP</span>
+                    <span>2.8s 0-100</span>
+                    <span>260 KM/H</span>
+                </div>
+
+                <div class="card-bottom">
+                    <strong>$197,000</strong>
+
+                    <button
+                        class="details-btn"
+                        data-car="Porsche Taycan Turbo S"
+                        data-price="$197,000"
+                        data-power="750 HP"
+                        data-speed="260 KM/H"
+                        data-image="https://images.unsplash.com/photo-1611651338412-8403fa6e3599?auto=format&fit=crop&w=1200&q=90">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <!-- CAR 5 -->
+        <article class="car-card" data-category="suv" data-name="Range Rover SV">
+
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1200&q=90">
+
+                <span class="tag">SUV</span>
+
+                <button class="heart">♡</button>
+            </div>
+
+            <div class="car-info">
+                <p>RANGE ROVER</p>
+                <h3>SV</h3>
+
+                <div class="car-details">
+                    <span>626 HP</span>
+                    <span>4.5s 0-100</span>
+                    <span>290 KM/H</span>
+                </div>
+
+                <div class="card-bottom">
+                    <strong>$220,000</strong>
+
+                    <button
+                        class="details-btn"
+                        data-car="Range Rover SV"
+                        data-price="$220,000"
+                        data-power="626 HP"
+                        data-speed="290 KM/H"
+                        data-image="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1200&q=90">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <!-- CAR 6 -->
+        <article class="car-card" data-category="supercar" data-name="McLaren 750S">
+
+            <div class="car-image">
+                <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&w=1200&q=90">
+
+                <span class="tag">SUPERCAR</span>
+
+                <button class="heart">♡</button>
+            </div>
+
+            <div class="car-info">
+                <p>MCLAREN</p>
+                <h3>750S</h3>
+
+                <div class="car-details">
+                    <span>740 HP</span>
+                    <span>2.8s 0-100</span>
+                    <span>332 KM/H</span>
+                </div>
+
+                <div class="card-bottom">
+                    <strong>$324,000</strong>
+
+                    <button
+                        class="details-btn"
+                        data-car="McLaren 750S"
+                        data-price="$324,000"
+                        data-power="740 HP"
+                        data-speed="332 KM/H"
+                        data-image="https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&w=1200&q=90">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURE -->
+<section class="feature">
+
+    <div class="feature-image"></div>
+
+    <div class="feature-content">
+
+        <p class="eyebrow">THE VÉLOCÉ EXPERIENCE</p>
+
+        <h2>
+            More Than<br>
+            <span>A Car.</span>
+        </h2>
+
+        <p>
+            We believe extraordinary cars deserve an extraordinary
+            experience. From private viewings to bespoke sourcing,
+            every detail is designed around your passion.
+        </p>
+
+        <a href="#contact" class="primary-btn">
+            Discover Our Experience →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div>
+        <p class="eyebrow">OUR PHILOSOPHY</p>
+        <h2>
+            For those who<br>
+            <span>feel the difference.</span>
+        </h2>
+    </div>
+
+    <div class="about-text">
+        <p>
+            VÉLOCÉ is a private collection dedicated to exceptional
+            automotive design and engineering.
+        </p>
+
+        <p>
+            Every automobile in our collection is selected for its
+            character, rarity and ability to create an unforgettable
+            driving experience.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <p class="eyebrow">START YOUR JOURNEY</p>
+
+    <h2>
+        Find Your<br>
+        <span>Dream Machine.</span>
+    </h2>
+
+    <p>
+        Speak with our collection specialists and discover
+        something extraordinary.
+    </p>
+
+    <button class="primary-btn" id="contactBtn">
+        Contact Collection →
+    </button>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-logo">
+        VÉLOCÉ<span>.</span>
+    </div>
+
+    <p>
+        © 2026 VÉLOCÉ AUTOMOTIVE COLLECTION
+    </p>
+
+    <div class="socials">
+        <a href="#">IG</a>
+        <a href="#">FB</a>
+        <a href="#">YT</a>
+    </div>
+
+</footer>
+
+
+<!-- MODAL -->
+<div class="modal" id="carModal">
+
+    <div class="modal-box">
+
+        <button class="close-modal" id="closeModal">
+            ×
+        </button>
+
+        <img id="modalImage" src="" alt="Car">
+
+        <div class="modal-content">
+
+            <p id="modalBrand">VÉLOCÉ COLLECTION</p>
+
+            <h2 id="modalCar">
+                Car Name
+            </h2>
+
+            <div class="modal-stats">
+
+                <div>
+                    <span>POWER</span>
+                    <strong id="modalPower">---</strong>
+                </div>
+
+                <div>
+                    <span>TOP SPEED</span>
+                    <strong id="modalSpeed">---</strong>
+                </div>
+
+            </div>
+
+            <h3 id="modalPrice">
+                $000,000
+            </h3>
+
+            <button class="primary-btn">
+                Request Private Viewing
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
