@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WANDER | Explore Amazing Places</title>
+    <title>Kerala — God's Own Country</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <!-- LOADER -->
-<div class="loader" id="loader">
-    <div class="loader-logo">WANDER<span>.</span></div>
-    <p>DISCOVER THE WORLD</p>
+<div class="loader">
+    <div class="loader-logo">KERALA</div>
+    <div class="loader-line"></div>
+    <p>Discovering God's Own Country...</p>
 </div>
 
 
@@ -24,214 +28,285 @@
 <header class="navbar">
 
     <div class="logo">
-        WANDER<span>.</span>
+        <span>കേരളം</span>
+        <small>GOD'S OWN COUNTRY</small>
     </div>
 
-    <nav id="nav">
+    <nav>
         <a href="#home">Home</a>
-        <a href="#destinations">Destinations</a>
+        <a href="#places">Places</a>
         <a href="#experiences">Experiences</a>
         <a href="#about">About</a>
     </nav>
 
-    <button class="menu" id="menu">☰</button>
+    <button class="menu-btn">☰</button>
 
 </header>
 
 
 <!-- HERO -->
-<section class="hero" id="home">
+<section id="home" class="hero">
 
     <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
+
+    <!-- animated fog -->
+    <div class="fog fog-one"></div>
+    <div class="fog fog-two"></div>
+
+    <!-- particles -->
+    <div class="particles"></div>
 
     <div class="hero-content">
 
-        <span class="eyebrow">
-            DISCOVER • EXPERIENCE • REMEMBER
-        </span>
+        <p class="eyebrow">WELCOME TO KERALA</p>
 
         <h1>
-            FIND YOUR
-            <em>WILD.</em>
+            Where Nature
+            <span>Breathes</span>
         </h1>
 
-        <p>
-            Explore breathtaking destinations, hidden gems,
-            peaceful beaches, majestic mountains and unforgettable
-            experiences around the world.
+        <p class="hero-text">
+            Journey through emerald forests, peaceful backwaters,
+            mist-covered mountains and endless tropical beauty.
         </p>
 
         <div class="hero-buttons">
-
-            <a href="#destinations" class="primary-btn">
-                Explore Places →
-            </a>
-
-            <a href="#experiences" class="secondary-btn">
-                View Experiences
-            </a>
-
+            <a href="#places" class="btn primary">Explore Kerala</a>
+            <a href="#experiences" class="btn secondary">Discover More</a>
         </div>
 
     </div>
 
-    <div class="hero-scroll">
-        SCROLL TO EXPLORE
+    <div class="scroll-down">
         <span></span>
+        SCROLL TO EXPLORE
     </div>
 
 </section>
 
 
-<!-- STATS -->
-<section class="stats">
+<!-- INTRO -->
+<section class="intro">
 
-    <div>
-        <strong>100+</strong>
-        <span>DESTINATIONS</span>
+    <div class="intro-image reveal">
+        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=90">
     </div>
 
-    <div>
-        <strong>35+</strong>
-        <span>COUNTRIES</span>
-    </div>
+    <div class="intro-content reveal">
 
-    <div>
-        <strong>250+</strong>
-        <span>EXPERIENCES</span>
-    </div>
+        <p class="section-label">THE SOUL OF KERALA</p>
 
-    <div>
-        <strong>∞</strong>
-        <span>ADVENTURES</span>
+        <h2>
+            A Land Painted
+            <em>By Nature</em>
+        </h2>
+
+        <p>
+            From the silent backwaters of Alappuzha to the misty
+            mountains of Munnar, Kerala is a place where every
+            sunrise feels like a painting.
+        </p>
+
+        <p>
+            Walk through spice plantations, listen to waterfalls,
+            watch traditional boats glide across emerald waters,
+            and experience the timeless culture of God's Own Country.
+        </p>
+
+        <div class="stats">
+
+            <div>
+                <strong>44</strong>
+                <span>Rivers</span>
+            </div>
+
+            <div>
+                <strong>580</strong>
+                <span>KM Coastline</span>
+            </div>
+
+            <div>
+                <strong>14</strong>
+                <span>Districts</span>
+            </div>
+
+        </div>
+
     </div>
 
 </section>
 
 
 <!-- DESTINATIONS -->
-<section class="destinations" id="destinations">
+<section id="places" class="destinations">
 
-    <div class="section-heading">
+    <div class="section-heading reveal">
 
-        <div>
-            <span>PLACES TO DISCOVER</span>
-
-            <h2>
-                Where will you
-                <em>go next?</em>
-            </h2>
-        </div>
-
-        <p>
-            From tropical beaches to misty mountains,
-            discover destinations that deserve a place
-            on your travel list.
-        </p>
-
-    </div>
-
-
-    <!-- SEARCH -->
-    <div class="search-area">
-
-        <div class="search-box">
-            <span>⌕</span>
-
-            <input
-                type="text"
-                id="search"
-                placeholder="Search places..."
-            >
-        </div>
-
-    </div>
-
-
-    <!-- FILTERS -->
-    <div class="filters">
-
-        <button class="filter active" data-category="all">
-            All
-        </button>
-
-        <button class="filter" data-category="beach">
-            Beaches
-        </button>
-
-        <button class="filter" data-category="mountain">
-            Mountains
-        </button>
-
-        <button class="filter" data-category="city">
-            Cities
-        </button>
-
-        <button class="filter" data-category="forest">
-            Forests
-        </button>
-
-        <button class="filter" data-category="waterfall">
-            Waterfalls
-        </button>
-
-        <button class="filter" data-category="heritage">
-            Heritage
-        </button>
-
-    </div>
-
-
-    <!-- DESTINATION GRID -->
-    <div class="place-grid" id="placeGrid"></div>
-
-    <div class="no-results" id="noResults">
-        No destination found.
-    </div>
-
-</section>
-
-
-<!-- FEATURED EXPERIENCE -->
-<section class="experience" id="experiences">
-
-    <div class="experience-image"></div>
-
-    <div class="experience-content">
-
-        <span>THE ART OF EXPLORING</span>
+        <p class="section-label">EXPLORE THE LAND</p>
 
         <h2>
-            Travel is the
-            <em>story you live.</em>
+            Places That Feel
+            <em>Unreal</em>
         </h2>
 
         <p>
-            Wake up somewhere you've never been.
-            Follow roads you've never travelled.
-            Meet people you'll never forget.
+            Discover the landscapes that make Kerala one of the
+            world's most beautiful tropical destinations.
         </p>
 
-        <a href="#destinations" class="primary-btn">
-            Start Exploring →
-        </a>
+    </div>
+
+
+    <div class="destination-grid">
+
+        <!-- MUNNAR -->
+        <article class="destination-card large reveal">
+
+            <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1400&q=90">
+
+            <div class="card-overlay">
+
+                <span>01 / HILLS</span>
+
+                <h3>Munnar</h3>
+
+                <p>
+                    Endless tea gardens floating among the clouds.
+                </p>
+
+                <button onclick="openPlace('Munnar')">
+                    Discover →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ALLEPPEY -->
+        <article class="destination-card reveal">
+
+            <img src="https://images.unsplash.com/photo-1602303632170-5a9e0f3f3f20?auto=format&fit=crop&w=1200&q=90">
+
+            <div class="card-overlay">
+
+                <span>02 / BACKWATERS</span>
+
+                <h3>Alappuzha</h3>
+
+                <p>Drift through the peaceful backwaters.</p>
+
+                <button onclick="openPlace('Alappuzha')">
+                    Discover →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- WAYANAD -->
+        <article class="destination-card reveal">
+
+            <img src="https://images.unsplash.com/photo-1605538883669-825200433431?auto=format&fit=crop&w=1200&q=90">
+
+            <div class="card-overlay">
+
+                <span>03 / WILDERNESS</span>
+
+                <h3>Wayanad</h3>
+
+                <p>Misty forests, caves and wild mountains.</p>
+
+                <button onclick="openPlace('Wayanad')">
+                    Discover →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- ATHIRAPPILLY -->
+        <article class="destination-card large reveal">
+
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1400&q=90">
+
+            <div class="card-overlay">
+
+                <span>04 / WATERFALLS</span>
+
+                <h3>Athirappilly</h3>
+
+                <p>The roaring waterfall of Kerala.</p>
+
+                <button onclick="openPlace('Athirappilly')">
+                    Discover →
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- VARKALA -->
+        <article class="destination-card reveal">
+
+            <img src="https://images.unsplash.com/photo-1590050752117-23a9d7fcf0a1?auto=format&fit=crop&w=1200&q=90">
+
+            <div class="card-overlay">
+
+                <span>05 / COAST</span>
+
+                <h3>Varkala</h3>
+
+                <p>Golden sunsets above the Arabian Sea.</p>
+
+                <button onclick="openPlace('Varkala')">
+                    Discover →
+                </button>
+
+            </div>
+
+        </article>
 
     </div>
 
 </section>
 
 
-<!-- EXPERIENCE CARDS -->
-<section class="experience-list">
+<!-- PARALLAX QUOTE -->
+<section class="quote-section">
 
-    <div class="section-heading center">
+    <div class="quote-bg"></div>
 
-        <span>UNFORGETTABLE EXPERIENCES</span>
+    <div class="quote-content reveal">
+
+        <span>“</span>
 
         <h2>
-            Make memories,
-            <em>not plans.</em>
+            Kerala is not just
+            <em>a destination.</em>
+            It is a feeling.
+        </h2>
+
+        <p>— God's Own Country</p>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCES -->
+<section id="experiences" class="experiences">
+
+    <div class="section-heading reveal">
+
+        <p class="section-label">EXPERIENCE KERALA</p>
+
+        <h2>
+            Feel The
+            <em>Magic</em>
         </h2>
 
     </div>
@@ -239,75 +314,119 @@
 
     <div class="experience-grid">
 
-        <article>
-            <div class="experience-icon">🏔️</div>
-            <h3>Mountain Adventures</h3>
-            <p>
-                Chase clouds, climb peaks and discover
-                breathtaking mountain landscapes.
-            </p>
-        </article>
+        <div class="experience reveal">
 
-        <article>
+            <div class="experience-number">01</div>
+
+            <div class="experience-icon">🛶</div>
+
+            <h3>Backwater Life</h3>
+
+            <p>
+                Sail through coconut-lined waterways
+                aboard a traditional Kerala houseboat.
+            </p>
+
+        </div>
+
+
+        <div class="experience reveal">
+
+            <div class="experience-number">02</div>
+
+            <div class="experience-icon">🌿</div>
+
+            <h3>Spice Trails</h3>
+
+            <p>
+                Walk through fragrant cardamom,
+                pepper and tea plantations.
+            </p>
+
+        </div>
+
+
+        <div class="experience reveal">
+
+            <div class="experience-number">03</div>
+
             <div class="experience-icon">🌊</div>
-            <h3>Ocean Escapes</h3>
-            <p>
-                Discover crystal-clear water, hidden beaches
-                and peaceful coastal destinations.
-            </p>
-        </article>
 
-        <article>
-            <div class="experience-icon">🌲</div>
-            <h3>Wild Forests</h3>
-            <p>
-                Escape into nature and explore untouched
-                forests filled with life.
-            </p>
-        </article>
+            <h3>Waterfalls</h3>
 
-        <article>
-            <div class="experience-icon">🏛️</div>
-            <h3>Ancient Places</h3>
             <p>
-                Walk through historic streets, monuments
-                and fascinating cultural landmarks.
+                Feel the power of Kerala's waterfalls
+                hidden inside tropical forests.
             </p>
-        </article>
+
+        </div>
+
+
+        <div class="experience reveal">
+
+            <div class="experience-number">04</div>
+
+            <div class="experience-icon">🌅</div>
+
+            <h3>Golden Sunsets</h3>
+
+            <p>
+                Watch the sun disappear over Kerala's
+                beautiful Arabian Sea coastline.
+            </p>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ABOUT -->
-<section class="about" id="about">
+<!-- CULTURE -->
+<section class="culture">
 
-    <div class="about-title">
+    <div class="culture-image reveal">
 
-        <span>WHY WANDER?</span>
-
-        <h2>
-            The world is
-            <em>waiting.</em>
-        </h2>
+        <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=1400&q=90">
 
     </div>
 
-    <div class="about-text">
+    <div class="culture-content reveal">
+
+        <p class="section-label">ANCIENT CULTURE</p>
+
+        <h2>
+            Where Tradition
+            <em>Lives On</em>
+        </h2>
 
         <p>
-            We created WANDER for people who believe the best
-            moments happen outside their comfort zone.
+            Kerala's beauty is not only found in its landscapes.
+            It lives in its art, food, festivals and traditions.
         </p>
 
-        <p>
-            Find inspiration for your next trip, discover hidden
-            destinations and create your own adventure.
-        </p>
+        <div class="culture-list">
 
-        <div class="quote">
-            “Not all those who wander are lost.”
+            <div>
+                <span>01</span>
+                <strong>Kathakali</strong>
+            </div>
+
+            <div>
+                <span>02</span>
+                <strong>Onam</strong>
+            </div>
+
+            <div>
+                <span>03</span>
+                <strong>Vallam Kali</strong>
+            </div>
+
+            <div>
+                <span>04</span>
+                <strong>Ayurveda</strong>
+            </div>
+
         </div>
 
     </div>
@@ -318,21 +437,25 @@
 <!-- CTA -->
 <section class="cta">
 
-    <span>YOUR NEXT ADVENTURE</span>
+    <div class="cta-inner reveal">
 
-    <h2>
-        Go somewhere
-        <em>beautiful.</em>
-    </h2>
+        <p class="section-label">YOUR NEXT JOURNEY</p>
 
-    <p>
-        Pack your bag. Pick a destination.
-        Let the adventure begin.
-    </p>
+        <h2>
+            Come Find
+            <em>Your Kerala</em>
+        </h2>
 
-    <a href="#destinations" class="primary-btn">
-        Explore Destinations →
-    </a>
+        <p>
+            Sometimes the most beautiful journeys
+            are the ones that slow you down.
+        </p>
+
+        <button onclick="startJourney()" class="btn primary">
+            Start Exploring
+        </button>
+
+    </div>
 
 </section>
 
@@ -340,87 +463,40 @@
 <!-- FOOTER -->
 <footer>
 
-    <div class="footer-main">
-
-        <div class="footer-logo">
-            WANDER<span>.</span>
-        </div>
-
-        <p>
-            Discover beautiful places.
-            Create unforgettable memories.
-        </p>
-
-        <div class="socials">
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-            <a href="#">Pinterest</a>
-        </div>
-
+    <div class="footer-logo">
+        കേരളം
+        <span>GOD'S OWN COUNTRY</span>
     </div>
 
-    <div class="footer-bottom">
+    <p>
+        Crafted with nature, culture & love.
+    </p>
 
-        <span>© 2026 WANDER TRAVEL</span>
+    <div class="footer-line"></div>
 
-        <span>EXPLORE • DREAM • DISCOVER</span>
-
-    </div>
+    <small>
+        © 2026 Kerala — God's Own Country
+    </small>
 
 </footer>
 
 
-<!-- PLACE MODAL -->
-<div class="modal" id="modal">
+<!-- MODAL -->
+<div class="modal" id="placeModal">
 
     <div class="modal-box">
 
-        <button class="close" id="close">
-            ×
+        <button class="close-modal" onclick="closePlace()">×</button>
+
+        <p class="section-label">DISCOVER</p>
+
+        <h2 id="modalTitle">Munnar</h2>
+
+        <p id="modalText"></p>
+
+        <button class="btn primary" onclick="closePlace()">
+            Close
         </button>
-
-        <div class="modal-image">
-            <img id="modalImage" src="" alt="">
-        </div>
-
-        <div class="modal-content">
-
-            <span id="modalCategory">
-                DESTINATION
-            </span>
-
-            <h2 id="modalTitle">
-                Place
-            </h2>
-
-            <p id="modalDescription">
-                Description
-            </p>
-
-            <div class="modal-info">
-
-                <div>
-                    <small>LOCATION</small>
-                    <strong id="modalLocation"></strong>
-                </div>
-
-                <div>
-                    <small>BEST TIME</small>
-                    <strong id="modalTime"></strong>
-                </div>
-
-                <div>
-                    <small>EXPERIENCE</small>
-                    <strong id="modalExperience"></strong>
-                </div>
-
-            </div>
-
-            <button class="primary-btn">
-                Plan This Adventure →
-            </button>
-
-        </div>
 
     </div>
 
