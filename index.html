@@ -1,244 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f4ed">
-  <meta name="description" content="Find your calm at AYANA Spa. Explore restorative massage, Ayurvedic rituals and wellness treatments in Kerala.">
-  <title>AYANA Spa — Restore Your Balance</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the Aurelius collection of premium watches.">
+  <title>AURELIUS — Fine Timepieces</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="AYANA Spa home">
-      <span class="brand-mark">A</span>
-      <span>AYANA<small>SPA & WELLNESS</small></span>
-    </a>
+  <header class="header">
+    <a class="logo" href="#home">AURELIUS<span>TIME, REFINED</span></a>
 
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span>
     </button>
 
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#experience">Our approach</a>
-      <a href="#treatments">Treatments</a>
-      <a href="#visit">Visit us</a>
-      <a class="nav-cta" href="#book">Book a treatment <span>↗</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#collection">Collection</a>
+      <a href="#story">Our story</a>
+      <a href="#craft">Craftsmanship</a>
     </nav>
+
+    <a class="bag" href="#collection">BAG <span id="cartCount">0</span></a>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <img class="hero-image"
-        src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2200&q=90"
-        alt="Serene spa pool surrounded by tropical greenery">
-
+      <img
+        src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=2200&q=90"
+        alt="Elegant luxury watch"
+      >
       <div class="hero-shade"></div>
 
       <div class="hero-content">
-        <p class="eyebrow">A SANCTUARY IN KERALA</p>
-        <h1>Make space<br>to <em>feel good.</em></h1>
-        <p class="hero-copy">
-          Slow down, breathe deeply and return to yourself with thoughtful
-          rituals inspired by nature.
-        </p>
-        <a class="button button-light" href="#treatments">
-          Explore treatments <span>↓</span>
-        </a>
+        <p class="eyebrow">THE SIGNATURE COLLECTION</p>
+        <h1>Time is<br><em>your own.</em></h1>
+        <p>Considered design. Exceptional detail. Made to be worn for a lifetime.</p>
+        <a class="button button-light" href="#collection">Explore the collection <span>↗</span></a>
       </div>
 
-      <div class="hero-note">
-        <span class="note-line"></span>
-        <span>REST • RESTORE • RENEW</span>
-      </div>
+      <span class="hero-caption">AURELIUS AUTOMATIC · 01</span>
     </section>
 
-    <section class="intro section" id="experience">
-      <div class="intro-kicker">
-        <span class="leaf">✳</span>
-        <p>THE AYANA WAY</p>
-      </div>
+    <section class="intro section" id="story">
+      <p class="eyebrow dark">DESIGNED TO ENDURE</p>
+      <h2>Quiet confidence.<br><em>Lasting presence.</em></h2>
+      <p class="intro-copy">
+        We create watches for those who value substance over spectacle.
+        Every line, finish and movement is chosen with intention.
+      </p>
+    </section>
 
-      <div class="intro-copy">
-        <h2>Wellbeing, at<br>your <em>own pace.</em></h2>
+    <section class="collection section" id="collection">
+      <div class="section-heading">
         <div>
-          <p>
-            Our spa is a quiet retreat for body and mind. From grounding
-            Ayurvedic therapies to unhurried moments in the steam room, each
-            experience is shaped around how you want to feel.
-          </p>
-          <a class="text-link" href="#visit">Step inside <span>↗</span></a>
+          <p class="eyebrow dark">THE AURELIUS EDIT</p>
+          <h2>Find your <em>timepiece.</em></h2>
+        </div>
+
+        <div class="filters" aria-label="Filter watches">
+          <button class="filter active" data-filter="all">All watches</button>
+          <button class="filter" data-filter="classic">Classic</button>
+          <button class="filter" data-filter="sport">Sport</button>
         </div>
       </div>
 
-      <div class="intro-image">
-        <img
-          src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1400&q=85"
-          alt="A calm treatment room prepared for a spa ritual"
-          loading="lazy">
-        <span>01 — A MOMENT JUST FOR YOU</span>
+      <div class="watch-grid">
+        <article class="watch-card" data-category="classic">
+          <div class="watch-image">
+            <span class="tag">BESTSELLER</span>
+            <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=1000&q=85" alt="Aurelius No. 01 classic watch" loading="lazy">
+            <button class="quick-add" data-name="Aurelius No. 01">Add to bag +</button>
+          </div>
+          <div class="watch-info">
+            <div><h3>Aurelius No. 01</h3><p>Automatic · 40 mm · Steel</p></div>
+            <strong>$2,450</strong>
+          </div>
+        </article>
+
+        <article class="watch-card" data-category="sport">
+          <div class="watch-image">
+            <span class="tag">NEW</span>
+            <img src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?auto=format&fit=crop&w=1000&q=85" alt="Aurelius Meridian sport watch" loading="lazy">
+            <button class="quick-add" data-name="Aurelius Meridian">Add to bag +</button>
+          </div>
+          <div class="watch-info">
+            <div><h3>Aurelius Meridian</h3><p>Automatic · 42 mm · Steel</p></div>
+            <strong>$3,180</strong>
+          </div>
+        </article>
+
+        <article class="watch-card" data-category="classic">
+          <div class="watch-image">
+            <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&w=1000&q=85" alt="Aurelius Petite dress watch" loading="lazy">
+            <button class="quick-add" data-name="Aurelius Petite">Add to bag +</button>
+          </div>
+          <div class="watch-info">
+            <div><h3>Aurelius Petite</h3><p>Quartz · 32 mm · Gold</p></div>
+            <strong>$1,890</strong>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="treatments section" id="treatments">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow dark">FIND YOUR RITUAL</p>
-          <h2>Time well <em>spent.</em></h2>
-        </div>
+    <section class="craft section" id="craft">
+      <div class="craft-image">
+        <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=1400&q=85" alt="Close-up details of a finely crafted watch" loading="lazy">
+      </div>
+      <div class="craft-copy">
+        <p class="eyebrow">MADE WITH INTENTION</p>
+        <h2>Precision you<br>can <em>feel.</em></h2>
         <p>
-          Choose a treatment to match your mood. Every session includes a
-          personal consultation with our wellness team.
+          From the measured sweep of the hands to the final polish of the case,
+          each Aurelius timepiece is assembled with care and built for everyday life.
         </p>
-      </div>
-
-      <div class="treatment-grid">
-        <article class="treatment-card">
-          <span class="treatment-index">01 / BODY</span>
-          <div class="treatment-icon">✳</div>
-          <h3>Ayurvedic Abhyanga</h3>
-          <p>A flowing warm-oil massage designed to ease tension and restore balance.</p>
-          <div class="treatment-meta"><span>60 MIN</span><strong>₹2,500</strong></div>
-          <button class="book-treatment" data-treatment="Ayurvedic Abhyanga">
-            Book this ritual <span>↗</span>
-          </button>
-        </article>
-
-        <article class="treatment-card featured">
-          <span class="treatment-index">02 / TOGETHER</span>
-          <div class="treatment-icon">☼</div>
-          <h3>Couple’s Escape</h3>
-          <p>Share a restorative massage in a private room made for slowing down together.</p>
-          <div class="treatment-meta"><span>75 MIN</span><strong>₹4,500</strong></div>
-          <button class="book-treatment" data-treatment="Couple’s Escape">
-            Book this ritual <span>↗</span>
-          </button>
-        </article>
-
-        <article class="treatment-card">
-          <span class="treatment-index">03 / RENEW</span>
-          <div class="treatment-icon">❋</div>
-          <h3>Herbal Steam</h3>
-          <p>A gentle aromatic steam infused with botanicals to leave you feeling refreshed.</p>
-          <div class="treatment-meta"><span>30 MIN</span><strong>₹1,500</strong></div>
-          <button class="book-treatment" data-treatment="Herbal Steam">
-            Book this ritual <span>↗</span>
-          </button>
-        </article>
-
-        <article class="treatment-card">
-          <span class="treatment-index">04 / FULL BODY</span>
-          <div class="treatment-icon">◌</div>
-          <h3>Kerala Body Ritual</h3>
-          <p>A head-to-toe experience combining warm oils, exfoliation and soothing care.</p>
-          <div class="treatment-meta"><span>90 MIN</span><strong>₹3,800</strong></div>
-          <button class="book-treatment" data-treatment="Kerala Body Ritual">
-            Book this ritual <span>↗</span>
-          </button>
-        </article>
-      </div>
-
-      <p class="price-note">Prices are indicative and subject to availability. Please confirm when booking.</p>
-    </section>
-
-    <section class="quote-band">
-      <img
-        src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=2000&q=85"
-        alt="Sunlight falling across a peaceful wellness space"
-        loading="lazy">
-      <div class="quote-overlay"></div>
-      <div class="quote-content">
-        <span>✳</span>
-        <blockquote>“Rest is not a reward.<br>It’s part of the journey.”</blockquote>
-        <p>YOUR TIME. YOUR WAY.</p>
+        <a class="text-link" href="#collection">Discover the collection <span>↗</span></a>
       </div>
     </section>
 
-    <section class="visit section" id="visit">
-      <div class="visit-image">
-        <img
-          src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=85"
-          alt="Spa therapist preparing a relaxing treatment"
-          loading="lazy">
-      </div>
-
-      <div class="visit-copy">
-        <p class="eyebrow dark">COME AS YOU ARE</p>
-        <h2>Your pause<br>starts <em>here.</em></h2>
-        <p>
-          Arrive a little early to settle in with herbal tea. Our team will
-          help you find the treatment and pace that feel right for you.
-        </p>
-
-        <div class="visit-details">
-          <div><span>HOURS</span><strong>Daily · 9:00 am – 8:00 pm</strong></div>
-          <div><span>LOCATION</span><strong>AYANA Wellness, Kerala</strong></div>
-        </div>
-
-        <a class="button button-dark" href="#book">Plan your visit <span>↗</span></a>
-      </div>
-    </section>
-
-    <section class="booking section" id="book">
-      <div class="booking-copy">
-        <p class="eyebrow">YOUR MOMENT AWAITS</p>
-        <h2>Let the day<br><em>unfold.</em></h2>
-        <p>Send us a request and our spa team will get in touch to confirm availability.</p>
-      </div>
-
-      <form class="booking-form" id="bookingForm">
-        <label>
-          Your name
-          <input name="name" autocomplete="name" required placeholder="How should we address you?">
-        </label>
-
-        <label>
-          Email or phone
-          <input name="contact" autocomplete="email" required placeholder="Where can we reach you?">
-        </label>
-
-        <div class="form-row">
-          <label>
-            Treatment
-            <select name="treatment" id="treatmentSelect" required>
-              <option value="">Choose a treatment</option>
-              <option>Ayurvedic Abhyanga</option>
-              <option>Couple’s Escape</option>
-              <option>Herbal Steam</option>
-              <option>Kerala Body Ritual</option>
-            </select>
-          </label>
-
-          <label>
-            Preferred date
-            <input type="date" name="date" id="dateInput" required>
-          </label>
-        </div>
-
-        <button class="button button-light" type="submit">
-          Request a booking <span>↗</span>
-        </button>
-        <p class="form-note" id="formMessage" aria-live="polite">
-          This is a booking request only; the team will confirm your appointment.
-        </p>
+    <section class="newsletter section">
+      <p class="eyebrow">A NOTE FROM AURELIUS</p>
+      <h2>Good things take <em>time.</em></h2>
+      <p>Sign up for collection previews, stories and occasional notes from our atelier.</p>
+      <form id="newsletterForm">
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" type="email" placeholder="Your email address" required>
+        <button type="submit">Sign me up ↗</button>
       </form>
+      <p class="form-message" id="formMessage" aria-live="polite"></p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <a class="brand footer-brand" href="#home">
-      <span class="brand-mark">A</span>
-      <span>AYANA<small>SPA & WELLNESS</small></span>
-    </a>
-    <p>Find your calm in Kerala.</p>
-    <a href="#home" class="back-top">BACK TO TOP ↑</a>
-    <small class="copyright">© <span id="year"></span> AYANA SPA. ALL RIGHTS RESERVED.</small>
+  <footer class="footer">
+    <a class="logo" href="#home">AURELIUS<span>TIME, REFINED</span></a>
+    <p>Made for the moments that matter.</p>
+    <span>© <span id="year"></span> AURELIUS</span>
   </footer>
 </body>
 </html>
