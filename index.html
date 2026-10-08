@@ -1,448 +1,244 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#061c13">
-    <title>AYANA | Kerala Luxury Retreat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="Find your calm at AYANA Spa. Explore restorative massage, Ayurvedic rituals and wellness treatments in Kerala.">
+  <title>AYANA Spa — Restore Your Balance</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-<img
-    src="./WhatsApp%20Image%202026-10-01%20at%201.00.37%20PM.jpeg"
-    alt="Aadhi at AYANA Kerala Retreat"
-    class="my-photo"
->
-
-<div class="loader" id="loader">
-    <h1>AYANA</h1>
-    <div class="loader-line"></div>
-    <p>KERALA LUXURY RETREAT</p>
-</div>
-
-<div class="particles" id="particles"></div>
-
-<header class="navbar">
-    <a href="#home" class="logo">
-        <strong>AYANA</strong>
-        <span>KERALA RETREAT</span>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="AYANA Spa home">
+      <span class="brand-mark">A</span>
+      <span>AYANA<small>SPA & WELLNESS</small></span>
     </a>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#stay">Villas</a>
-        <a href="#spa">Spa & Wellness</a>
-        <a href="#experiences">Experiences</a>
-    </nav>
-
-    <button class="nav-book" onclick="openBooking()">
-        RESERVE NOW
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
     </button>
-</header>
 
-<!-- HERO SECTION -->
-<section class="hero" id="home">
-    <div class="hero-image"></div>
-    <div class="hero-overlay"></div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#experience">Our approach</a>
+      <a href="#treatments">Treatments</a>
+      <a href="#visit">Visit us</a>
+      <a class="nav-cta" href="#book">Book a treatment <span>↗</span></a>
+    </nav>
+  </header>
 
-    <div class="hero-content reveal">
-        <p class="eyebrow">WELCOME TO GOD'S OWN COUNTRY</p>
+  <main>
+    <section class="hero" id="home">
+      <img class="hero-image"
+        src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2200&q=90"
+        alt="Serene spa pool surrounded by tropical greenery">
 
-        <h1>Discover<br><i>Kerala.</i></h1>
+      <div class="hero-shade"></div>
 
-        <p class="hero-description">
-            An extraordinary escape into emerald forests,
-            tranquil backwaters and timeless Kerala
-            hospitality. Your private paradise awaits.
+      <div class="hero-content">
+        <p class="eyebrow">A SANCTUARY IN KERALA</p>
+        <h1>Make space<br>to <em>feel good.</em></h1>
+        <p class="hero-copy">
+          Slow down, breathe deeply and return to yourself with thoughtful
+          rituals inspired by nature.
         </p>
+        <a class="button button-light" href="#treatments">
+          Explore treatments <span>↓</span>
+        </a>
+      </div>
 
-        <div class="hero-buttons">
-            <button class="gold-button" onclick="openBooking()">
-                BOOK YOUR ESCAPE ↗
-            </button>
-            <a href="#experiences" class="outline-button">
-                EXPLORE KERALA
-            </a>
+      <div class="hero-note">
+        <span class="note-line"></span>
+        <span>REST • RESTORE • RENEW</span>
+      </div>
+    </section>
+
+    <section class="intro section" id="experience">
+      <div class="intro-kicker">
+        <span class="leaf">✳</span>
+        <p>THE AYANA WAY</p>
+      </div>
+
+      <div class="intro-copy">
+        <h2>Wellbeing, at<br>your <em>own pace.</em></h2>
+        <div>
+          <p>
+            Our spa is a quiet retreat for body and mind. From grounding
+            Ayurvedic therapies to unhurried moments in the steam room, each
+            experience is shaped around how you want to feel.
+          </p>
+          <a class="text-link" href="#visit">Step inside <span>↗</span></a>
         </div>
+      </div>
 
-        <div class="hero-location">
-            <span>✦</span> KERALA, INDIA
-        </div>
-    </div>
-
-    <!-- YOUR UPLOADED PHOTO -->
-    <div class="person-wrapper">
-        <div class="person-glow"></div>
-
-        <div class="person-card">
-            <div class="person-image">
-                <img
-                    src="./person.jpeg"
-                    alt="Featured guest at AYANA Kerala Retreat"
-                    onerror="this.alt='Photo not found. Place person.jpeg beside index.html.'"
-                >
-            </div>
-
-            <div class="person-info">
-                <small>YOUR PRIVATE ESCAPE</small>
-                <h3>Relax. <i>Reconnect.</i></h3>
-                <div class="person-line"></div>
-                <span>AYANA • KERALA</span>
-            </div>
-        </div>
-
-        <div class="floating-circle circle-one"></div>
-        <div class="floating-circle circle-two"></div>
-    </div>
-
-    <a href="#intro" class="scroll-indicator">
-        <span></span> SCROLL TO EXPLORE
-    </a>
-</section>
-
-<!-- INTRODUCTION -->
-<section class="intro section" id="intro">
-    <div class="intro-content reveal">
-        <p class="section-label">THE AYANA EXPERIENCE</p>
-
-        <h2>A slower way<br>to <i>live.</i></h2>
-
-        <p>
-            Escape the everyday and discover a world where
-            lush greenery, beautiful waters, traditional
-            flavours and peaceful moments come together.
-        </p>
-
-        <div class="stats">
-            <div><strong>24/7</strong><span>HOSPITALITY</span></div>
-            <div><strong>5★</strong><span>COMFORT</span></div>
-            <div><strong>100%</strong><span>RELAXATION</span></div>
-        </div>
-    </div>
-
-    <div class="intro-photo reveal">
+      <div class="intro-image">
         <img
-            src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=85"
-            alt="Kerala backwaters and tropical nature"
-            loading="lazy"
-        >
-        <div class="image-caption">01 — THE BEAUTY OF KERALA</div>
-    </div>
-</section>
+          src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1400&q=85"
+          alt="A calm treatment room prepared for a spa ritual"
+          loading="lazy">
+        <span>01 — A MOMENT JUST FOR YOU</span>
+      </div>
+    </section>
 
-<!-- VILLAS -->
-<section class="section rooms" id="stay">
-    <div class="section-heading reveal">
-        <p class="section-label">YOUR PRIVATE SANCTUARY</p>
-        <h2>Choose your <i>escape.</i></h2>
-        <p>Beautiful stays inspired by Kerala's natural surroundings.</p>
-    </div>
-
-    <div class="room-grid">
-        <article class="room-card reveal">
-            <div class="room-image">
-                <img
-                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=85"
-                    alt="Luxury forest villa"
-                    loading="lazy"
-                >
-                <span class="room-number">01</span>
-            </div>
-            <div class="room-content">
-                <small>SIGNATURE COLLECTION</small>
-                <h3>Forest Villa</h3>
-                <p>A peaceful hideaway surrounded by tropical greenery.</p>
-                <div class="room-bottom">
-                    <div class="price">₹8,500 <span>/ night</span></div>
-                    <button onclick="selectRoom(8500)">RESERVE ↗</button>
-                </div>
-            </div>
-        </article>
-
-        <article class="room-card reveal">
-            <div class="room-image">
-                <img
-                    src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1000&q=85"
-                    alt="Luxury pool villa"
-                    loading="lazy"
-                >
-                <span class="room-number">02</span>
-            </div>
-            <div class="room-content">
-                <small>PREMIUM COLLECTION</small>
-                <h3>Pool Villa</h3>
-                <p>Enjoy private-pool luxury and tranquil surroundings.</p>
-                <div class="room-bottom">
-                    <div class="price">₹12,500 <span>/ night</span></div>
-                    <button onclick="selectRoom(12500)">RESERVE ↗</button>
-                </div>
-            </div>
-        </article>
-
-        <article class="room-card reveal">
-            <div class="room-image">
-                <img
-                    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85"
-                    alt="Luxury waterside resort"
-                    loading="lazy"
-                >
-                <span class="room-number">03</span>
-            </div>
-            <div class="room-content">
-                <small>ROYAL COLLECTION</small>
-                <h3>Lake Villa</h3>
-                <p>Wake up to peaceful water views and gentle breezes.</p>
-                <div class="room-bottom">
-                    <div class="price">₹18,500 <span>/ night</span></div>
-                    <button onclick="selectRoom(18500)">RESERVE ↗</button>
-                </div>
-            </div>
-        </article>
-    </div>
-</section>
-
-<!-- SPA -->
-<section class="spa section" id="spa">
-    <div class="spa-picture reveal">
-        <img
-            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1300&q=85"
-            alt="Peaceful spa and wellness experience"
-            loading="lazy"
-        >
-        <div class="spa-badge">AYANA<br>WELLNESS</div>
-    </div>
-
-    <div class="spa-content reveal">
-        <p class="section-label">RESTORE YOUR BALANCE</p>
-        <h2>Breathe.<br><i>Restore.</i></h2>
-
+    <section class="treatments section" id="treatments">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow dark">FIND YOUR RITUAL</p>
+          <h2>Time well <em>spent.</em></h2>
+        </div>
         <p>
-            Take a moment for yourself with relaxing
-            spa experiences and Kerala-inspired wellness.
-            Treatment availability should be confirmed
-            with the resort.
+          Choose a treatment to match your mood. Every session includes a
+          personal consultation with our wellness team.
+        </p>
+      </div>
+
+      <div class="treatment-grid">
+        <article class="treatment-card">
+          <span class="treatment-index">01 / BODY</span>
+          <div class="treatment-icon">✳</div>
+          <h3>Ayurvedic Abhyanga</h3>
+          <p>A flowing warm-oil massage designed to ease tension and restore balance.</p>
+          <div class="treatment-meta"><span>60 MIN</span><strong>₹2,500</strong></div>
+          <button class="book-treatment" data-treatment="Ayurvedic Abhyanga">
+            Book this ritual <span>↗</span>
+          </button>
+        </article>
+
+        <article class="treatment-card featured">
+          <span class="treatment-index">02 / TOGETHER</span>
+          <div class="treatment-icon">☼</div>
+          <h3>Couple’s Escape</h3>
+          <p>Share a restorative massage in a private room made for slowing down together.</p>
+          <div class="treatment-meta"><span>75 MIN</span><strong>₹4,500</strong></div>
+          <button class="book-treatment" data-treatment="Couple’s Escape">
+            Book this ritual <span>↗</span>
+          </button>
+        </article>
+
+        <article class="treatment-card">
+          <span class="treatment-index">03 / RENEW</span>
+          <div class="treatment-icon">❋</div>
+          <h3>Herbal Steam</h3>
+          <p>A gentle aromatic steam infused with botanicals to leave you feeling refreshed.</p>
+          <div class="treatment-meta"><span>30 MIN</span><strong>₹1,500</strong></div>
+          <button class="book-treatment" data-treatment="Herbal Steam">
+            Book this ritual <span>↗</span>
+          </button>
+        </article>
+
+        <article class="treatment-card">
+          <span class="treatment-index">04 / FULL BODY</span>
+          <div class="treatment-icon">◌</div>
+          <h3>Kerala Body Ritual</h3>
+          <p>A head-to-toe experience combining warm oils, exfoliation and soothing care.</p>
+          <div class="treatment-meta"><span>90 MIN</span><strong>₹3,800</strong></div>
+          <button class="book-treatment" data-treatment="Kerala Body Ritual">
+            Book this ritual <span>↗</span>
+          </button>
+        </article>
+      </div>
+
+      <p class="price-note">Prices are indicative and subject to availability. Please confirm when booking.</p>
+    </section>
+
+    <section class="quote-band">
+      <img
+        src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=2000&q=85"
+        alt="Sunlight falling across a peaceful wellness space"
+        loading="lazy">
+      <div class="quote-overlay"></div>
+      <div class="quote-content">
+        <span>✳</span>
+        <blockquote>“Rest is not a reward.<br>It’s part of the journey.”</blockquote>
+        <p>YOUR TIME. YOUR WAY.</p>
+      </div>
+    </section>
+
+    <section class="visit section" id="visit">
+      <div class="visit-image">
+        <img
+          src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=85"
+          alt="Spa therapist preparing a relaxing treatment"
+          loading="lazy">
+      </div>
+
+      <div class="visit-copy">
+        <p class="eyebrow dark">COME AS YOU ARE</p>
+        <h2>Your pause<br>starts <em>here.</em></h2>
+        <p>
+          Arrive a little early to settle in with herbal tea. Our team will
+          help you find the treatment and pace that feel right for you.
         </p>
 
-        <div class="spa-list">
-            <div class="spa-item">
-                <div><span>01</span><h3>Ayurvedic Massage</h3></div>
-                <strong>₹2,500</strong>
-            </div>
-            <div class="spa-item">
-                <div><span>02</span><h3>Couple Spa</h3></div>
-                <strong>₹4,500</strong>
-            </div>
-            <div class="spa-item">
-                <div><span>03</span><h3>Herbal Steam</h3></div>
-                <strong>₹1,500</strong>
-            </div>
-            <div class="spa-item">
-                <div><span>04</span><h3>Full Body Ritual</h3></div>
-                <strong>₹3,800</strong>
-            </div>
+        <div class="visit-details">
+          <div><span>HOURS</span><strong>Daily · 9:00 am – 8:00 pm</strong></div>
+          <div><span>LOCATION</span><strong>AYANA Wellness, Kerala</strong></div>
         </div>
 
-        <button class="gold-button" onclick="openSpa()">
-            PRE-BOOK YOUR SPA ↗
+        <a class="button button-dark" href="#book">Plan your visit <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="booking section" id="book">
+      <div class="booking-copy">
+        <p class="eyebrow">YOUR MOMENT AWAITS</p>
+        <h2>Let the day<br><em>unfold.</em></h2>
+        <p>Send us a request and our spa team will get in touch to confirm availability.</p>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <label>
+          Your name
+          <input name="name" autocomplete="name" required placeholder="How should we address you?">
+        </label>
+
+        <label>
+          Email or phone
+          <input name="contact" autocomplete="email" required placeholder="Where can we reach you?">
+        </label>
+
+        <div class="form-row">
+          <label>
+            Treatment
+            <select name="treatment" id="treatmentSelect" required>
+              <option value="">Choose a treatment</option>
+              <option>Ayurvedic Abhyanga</option>
+              <option>Couple’s Escape</option>
+              <option>Herbal Steam</option>
+              <option>Kerala Body Ritual</option>
+            </select>
+          </label>
+
+          <label>
+            Preferred date
+            <input type="date" name="date" id="dateInput" required>
+          </label>
+        </div>
+
+        <button class="button button-light" type="submit">
+          Request a booking <span>↗</span>
         </button>
-    </div>
-</section>
+        <p class="form-note" id="formMessage" aria-live="polite">
+          This is a booking request only; the team will confirm your appointment.
+        </p>
+      </form>
+    </section>
+  </main>
 
-<!-- EXPERIENCES -->
-<section class="section experiences" id="experiences">
-    <div class="section-heading reveal">
-        <p class="section-label">BEYOND THE ORDINARY</p>
-        <h2>Explore <i>Kerala.</i></h2>
-        <p>Discover nature, culture, flavours and peaceful moments.</p>
-    </div>
-
-    <div class="experience-grid">
-        <article class="experience-card reveal">
-            <span>01 / WATER</span>
-            <div class="experience-icon">🛶</div>
-            <h3>Private Houseboat</h3>
-            <p>Experience a relaxing cruise through the backwaters.</p>
-            <strong>₹6,500</strong>
-            <button onclick="bookExperience('Private Houseboat',6500)">ADD EXPERIENCE ↗</button>
-        </article>
-
-        <article class="experience-card reveal">
-            <span>02 / NATURE</span>
-            <div class="experience-icon">🌿</div>
-            <h3>Spice Garden</h3>
-            <p>Explore the aromas and traditions of Kerala spices.</p>
-            <strong>₹1,800</strong>
-            <button onclick="bookExperience('Spice Garden',1800)">ADD EXPERIENCE ↗</button>
-        </article>
-
-        <article class="experience-card reveal">
-            <span>03 / SUNSET</span>
-            <div class="experience-icon">🌅</div>
-            <h3>Sunset Cruise</h3>
-            <p>Enjoy a golden sunset beside beautiful waters.</p>
-            <strong>₹2,500</strong>
-            <button onclick="bookExperience('Sunset Cruise',2500)">ADD EXPERIENCE ↗</button>
-        </article>
-
-        <article class="experience-card reveal">
-            <span>04 / CULTURE</span>
-            <div class="experience-icon">🥥</div>
-            <h3>Kerala Cooking</h3>
-            <p>Discover local ingredients and traditional recipes.</p>
-            <strong>₹2,000</strong>
-            <button onclick="bookExperience('Kerala Cooking',2000)">ADD EXPERIENCE ↗</button>
-        </article>
-    </div>
-</section>
-
-<!-- FINAL CALL TO ACTION -->
-<section class="final-cta">
-    <div class="cta-content reveal">
-        <p class="section-label">YOUR KERALA STORY STARTS HERE</p>
-        <h2>Make a memory<br><i>worth keeping.</i></h2>
-        <p>Plan a relaxing escape surrounded by nature.</p>
-        <button class="gold-button" onclick="openBooking()">
-            CHECK YOUR STAY ↗
-        </button>
-    </div>
-</section>
-
-<footer>
-    <a href="#home" class="footer-logo">
-        AYANA <span>KERALA RETREAT</span>
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-mark">A</span>
+      <span>AYANA<small>SPA & WELLNESS</small></span>
     </a>
-    <div><p>Kerala, India</p><p>Luxury • Nature • Wellness</p></div>
-    <div><p>Reservations</p><p>Update this section with your contact details.</p></div>
-    <p class="copyright">© 2026 AYANA. DEMO WEBSITE.</p>
-</footer>
-
-<!-- STAY BOOKING MODAL -->
-<div class="modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
-    <div class="modal-box">
-        <button class="close" onclick="closeBooking()" aria-label="Close">×</button>
-        <p class="section-label">AYANA RESERVATIONS</p>
-        <h2 id="bookingTitle">Book your <i>stay.</i></h2>
-
-        <form id="bookingForm">
-            <label for="room">Choose a villa</label>
-            <select id="room" required>
-                <option value="8500">Forest Villa — ₹8,500/night</option>
-                <option value="12500">Pool Villa — ₹12,500/night</option>
-                <option value="18500">Lake Villa — ₹18,500/night</option>
-            </select>
-
-            <div class="date-grid">
-                <div>
-                    <label for="checkin">Check-in</label>
-                    <input type="date" id="checkin" required>
-                </div>
-                <div>
-                    <label for="checkout">Check-out</label>
-                    <input type="date" id="checkout" required>
-                </div>
-            </div>
-
-            <label for="guests">Guests</label>
-            <select id="guests">
-                <option value="1">1 guest</option>
-                <option value="2" selected>2 guests</option>
-                <option value="3">3 guests</option>
-                <option value="4">4 guests</option>
-            </select>
-
-            <label for="guestName">Your name</label>
-            <input type="text" id="guestName" placeholder="Enter your name" required>
-
-            <label for="guestPhone">Phone number</label>
-            <input type="tel" id="guestPhone" placeholder="Enter your phone number" required>
-
-            <div class="total">
-                <span>ESTIMATED STAY TOTAL</span>
-                <strong id="total">₹8,500</strong>
-            </div>
-
-            <p class="form-note">
-                Demo estimate only. Final pricing and availability require confirmation.
-            </p>
-
-            <button class="gold-button full" type="submit">
-                REQUEST PRE-BOOKING
-            </button>
-        </form>
-        <div id="bookingResult" class="result" aria-live="polite"></div>
-    </div>
-</div>
-
-<!-- SPA BOOKING MODAL -->
-<div class="modal" id="spaModal" role="dialog" aria-modal="true" aria-labelledby="spaTitle">
-    <div class="modal-box">
-        <button class="close" onclick="closeSpa()" aria-label="Close">×</button>
-        <p class="section-label">AYANA WELLNESS</p>
-        <h2 id="spaTitle">Spa <i>booking.</i></h2>
-
-        <form id="spaForm">
-            <label for="spaTreatment">Choose a treatment</label>
-            <select id="spaTreatment">
-                <option value="2500">Ayurvedic Massage — ₹2,500</option>
-                <option value="4500">Couple Spa — ₹4,500</option>
-                <option value="1500">Herbal Steam — ₹1,500</option>
-                <option value="3800">Full Body Ritual — ₹3,800</option>
-            </select>
-
-            <label for="spaDate">Preferred date</label>
-            <input type="date" id="spaDate" required>
-
-            <label for="spaName">Your name</label>
-            <input type="text" id="spaName" placeholder="Enter your name" required>
-
-            <div class="total">
-                <span>ESTIMATED PRICE</span>
-                <strong id="spaTotal">₹2,500</strong>
-            </div>
-
-            <button class="gold-button full" type="submit">REQUEST SPA BOOKING</button>
-        </form>
-        <div id="spaResult" class="result" aria-live="polite"></div>
-    </div>
-</div>
-
-<!-- EXPERIENCE REQUEST MODAL -->
-<div class="modal" id="experienceModal" role="dialog" aria-modal="true" aria-labelledby="experienceTitle">
-    <div class="modal-box">
-        <button class="close" onclick="closeExperience()" aria-label="Close">×</button>
-        <p class="section-label">PERSONALISE YOUR TRIP</p>
-        <h2 id="experienceTitle">Add an <i>experience.</i></h2>
-
-        <form id="experienceForm">
-            <p id="experienceDescription"></p>
-            <label for="experienceDate">Preferred date</label>
-            <input type="date" id="experienceDate" required>
-            <label for="experienceName">Your name</label>
-            <input type="text" id="experienceName" placeholder="Enter your name" required>
-            <div class="total">
-                <span>ESTIMATED PRICE</span>
-                <strong id="experienceTotal">₹0</strong>
-            </div>
-            <button class="gold-button full" type="submit">REQUEST EXPERIENCE</button>
-        </form>
-        <div id="experienceResult" class="result" aria-live="polite"></div>
-    </div>
-</div>
-
-<script src="script.js"></script>
-    
-<h2>Photo Test</h2>
-<img
-  src="./person.jpeg"
-  alt="My photo"
-  style="width:300px; height:350px; object-fit:cover;"
->
-
+    <p>Find your calm in Kerala.</p>
+    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+    <small class="copyright">© <span id="year"></span> AYANA SPA. ALL RIGHTS RESERVED.</small>
+  </footer>
 </body>
 </html>
